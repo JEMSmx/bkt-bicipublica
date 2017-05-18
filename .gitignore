@@ -1,3 +1,4 @@
-.env
-.vagrant/
+/.vagrant/
 .DS_Store
+/release.txt
+/koi.log

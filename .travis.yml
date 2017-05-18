@@ -5,40 +5,34 @@ env:
     - secure: "eEIDludUFSgz8zlQxsVzh/saJ5xw7tJorYDMvD1j4SHm+VK046t1ATe5YEnGs0XMioC9nhm0sqEj7u8yHnXnYtnKSNBwjwSMnknxBdUiRGNub5tN9XwIrpaSxRkUb1rR1YISSPLIUKlu62PIQSKiWP3jM/XNswPHWGsbH2vL1POwX8lYk/EYvyB1SlpipFamJVGtnAptcUZvTyGWfHVsO06fwIknhtsWlms/E/299cAc+jSr0c6zeRmDmETxbInYZ6BgRREFAmSlQaM2Hz2fbZnZ8qBBhzAvgr2yZ+d98DS+K33Qi+rR2i9+nG1hC8NUhmWm4OWSQ834TNHYfN2n80gWETfwwrQ5AGAwMjbjZJPPTvpEdlcPPhBNzHkDyFx/tqPuqskAtTIDAyD9tDk1R7Om+9ym+aAMu+Om9KRF5vxHtf5Y8wWUDDB89di/d5w+MNhD/CzzT/V7W9pDW9NhPqIRuyUKGuGxe7zW42Cp64icG3E5nmoZESuRcK5Mw+rN46s05PEJ3mqaDiNBKv2PD/5DdZrojBfE900ym/nVF/ctuJBKOEH+t0CpCWihKaY2dg0aGVGQ+pCbvimqptpx1E2QNSzwwDlhHwIC6HSXTTJbLVPP5pK3i/woNAKIz3eniyeqZdr43mvNRKQslDVS0qUzpoSk2umR0l+iDFKhOho="
     # beta SHA256-
     # - secure: ""
-install:
-  - npm install -g csslint htmlhint
-  - wget -O /tmp/phantomjs-netlog.js https://gist.githubusercontent.com/memiux/0e8377f9361fefce64e848e74fa3232c/raw/phantomjs-netlog.js
 script:
-  - "find $PWD -path */public/site/templates/* -type f -name k-*.css -size +1c | xargs --no-run-if-empty csslint"
-  - "find $PWD -path */public/site/templates/* -type f -name *.html -size +1c | xargs --no-run-if-empty htmlhint"
-  - "find $PWD -path */public/site/templates/* -type f -name *.html | xargs --no-run-if-empty -I{} phantomjs --ignore-ssl-errors=true --ssl-protocol=any /tmp/phantomjs-netlog.js file://{}"
+  - true
 notifications:
   email: false
   slack: krrrunch:Heq9HQZoEZT9rZJohu8in30e
 language: node_js
 node_js:
-  - "5.1"
+  - "6"
 before_deploy:
-  - 'git config --global user.email "deploy@travis"'
+  - 'git config --global user.email "deploy@travis-ci"'
   - 'git config --global user.name "[Deploy]"'
-  - "wget -O /tmp/git-ftp https://gist.githubusercontent.com/memiux/f4f36ff274bd827aac573520242dea8a/raw/git-ftp && chmod +x /tmp/git-ftp"
   - export GIT_FTP_URL_BRANCH=GIT_FTP_URL_$TRAVIS_BRANCH
-  - '/tmp/git-ftp add-scope $TRAVIS_BRANCH "${!GIT_FTP_URL_BRANCH}"'
+  - './git-ftp add-scope $TRAVIS_BRANCH "${!GIT_FTP_URL_BRANCH}"'
   - git config git-ftp.syncroot public
   - npm install -g uglify-js
-  - gem install sass -v 3.4.22 --no-ri --no-rdoc
-  - /tmp/git-ftp catchup -s $TRAVIS_BRANCH -v
-  - ./public/site/templates/koi.sh -p -f
-  - git commit -m deploy *.php
+  - gem install sass -v 3.4.23 --no-ri --no-rdoc
+  # - ./git-ftp catchup -s $TRAVIS_BRANCH -v
+  - 'FTP_URL="${!GIT_FTP_URL_BRANCH}" ./koi build -e local'
+  # - git commit -m deploy --all
 deploy:
   - provider: script
-    script: /tmp/git-ftp push -s $TRAVIS_BRANCH -v
+    script: ./git-ftp push -s $TRAVIS_BRANCH -v -f
     skip_cleanup: true
     on:
-      branch: master
-  - provider: script
-    script: /tmp/git-ftp push -s $TRAVIS_BRANCH -v
-    on:
-      branch: beta
-after_deploy:
-  - './cleanup.py "${!GIT_FTP_URL_BRANCH}"'
+      all_branches: true
+  # - provider: script
+  #   script: ./git-ftp push -s $TRAVIS_BRANCH -v -f
+  #   skip_cleanup: true
+  #   on:
+  #     branch: beta
+

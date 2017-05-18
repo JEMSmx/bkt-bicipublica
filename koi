@@ -1,0 +1,215 @@
+#!/bin/bash
+#
+#.Usage: koi <command> [options]
+#.
+#.  build       -e <env> -l (set assets version to 455375-147357)
+#.  package     -i (include) ex: -i 'install.php wire/'
+#.  upload      -e <env>
+#.  install     -e <env>
+#.  deploy      -e <env> all-in-one
+#.
+# export FTP_URL='ftp://vagrant:vagrant@127.0.0.1/'
+# TODO: .htaccess "Down For Maintenance"
+set -u
+set -eo pipefail
+# set -x
+
+declare ROOT_PATH="$(cd "$(dirname "$0")/"; pwd)" COMMAND="${1:-}" FTP_URL="${FTP_URL:-}" \
+NOW="$(date +"%Y%m%d-%H%M%S%Z")" TIMESTAMP="$(date +%s)" ARROW="--->" BUILD_PATH="/tmp/.koi-build" \
+ASSETS_VERSION="" BUILD_LATEST="" PACKAGE_INCLUDE="" PROJECT_NAME="" SKIP_ASSETS_REBUILD="" TARGET_ENV="" \
+FTP_HOST="" FTP_USERNAME="" FTP_PASSWORD="";
+shift 1 || true;
+
+usage(){ grep '^#\.' "$0" | sed 's/#.//'; exit 0; }
+print(){ echo -e "\033[0;36m*** $1\033[0m"; echo $1 >> $ROOT_PATH/koi.log; }
+warn(){ echo -e "\033[0;33m$1\033[0m"; }
+fail(){ echo -e "\033[01;31m[ERROR] $1\033[0m"; exit 1; }
+
+parse_options(){
+	while getopts "ae:li:h" opt; do
+		case $opt in
+			a) SKIP_ASSETS_REBUILD=true ;;
+			e) TARGET_ENV=$OPTARG ;;
+			l) BUILD_LATEST=true ;;
+			i) PACKAGE_INCLUDE=$OPTARG ;;
+			h | *) usage ;;
+		esac
+	done
+}
+
+load_environment_vars(){
+	[[ -z "$FTP_URL" ]] && fail "FTP_URL can't be blank"
+
+	FTP_HOST="$(echo ${FTP_URL##*@} | sed 's|/$||')"
+	local ftp_credentials="$(echo ${FTP_URL%@*} | sed 's|^ftp://||')"
+	FTP_USERNAME=$(echo $ftp_credentials | cut -d: -f1)
+	FTP_PASSWORD=$(echo $ftp_credentials | cut -d: -f2-)
+	return 0
+}
+
+load_current_release(){
+	[[ ! -s $ROOT_PATH/release.txt ]] && fail "Release file '$ROOT_PATH/release.txt' is empty or doesn't exists."
+	local $(cat $ROOT_PATH/release.txt)
+	PROJECT_NAME="$project_name"
+	RELEASE="$release"
+	ASSETS_VERSION="$assets_version"
+	BUILD_ENV="$environment"
+	PACKAGE_BASENAME="$PROJECT_NAME-$RELEASE.zip"
+	PACKAGE_FILE="$BUILD_PATH/$PACKAGE_BASENAME"
+}
+
+ping_remote(){
+	[[ "verbose" == "${1:-}" ]] && print "Testing connectivity"
+	local exitcode=$(ping -c1 $FTP_HOST >/dev/null; echo $?)
+	[[ $exitcode -ne 0 ]] && fail "Can't ping host $FTP_HOST"
+	return $exitcode
+}
+
+record_release_info(){
+	print "Recording release info"
+	local project_name=$(sed -n 's/.*PROJECT_NAME=\(.*\).*/\1/gp' .travis.yml)
+	[[ -z "$project_name" ]] && fail "Can't get PROJECT_NAME from .travis.yml"
+	cat > release.txt <<-FILE
+	project_name=$project_name
+	release=$RELEASE
+	assets_version=$ASSETS_VERSION
+	environment=$TARGET_ENV
+	hostname=$(hostname)
+	user=$USER
+	pwd=$PWD
+	FILE
+}
+
+do_build(){
+	[ -z "$TARGET_ENV" ] && fail "Environment undefined"
+	print "Building"
+	RELEASE="$NOW"
+
+	cd $ROOT_PATH/public/site/templates
+
+	[ $(ls -1d static/455375-* 2>/dev/null | wc -l) -gt 1 ] && rm -vrf static/455375-*
+
+	if [ "$BUILD_LATEST" ]; then
+		ASSETS_VERSION="455375-147357"
+	  STATIC_PATH="static/$ASSETS_VERSION"
+	  [ -d static/455375-* ] && [ ! -d static/455375-147357 ] && mv -v static/455375-* $STATIC_PATH
+	else
+		ASSETS_VERSION="455375-$TIMESTAMP"
+	  STATIC_PATH="static/$ASSETS_VERSION"
+	  [ -d static/455375-* ] && mv -v static/455375-* $STATIC_PATH
+	fi
+
+  find $PWD -type f -name '*.php' | xargs sed -i~ "s|static/455375-[[:digit:]]*|$STATIC_PATH|g"
+  find $PWD -type f -name '*.php~' -exec rm {} \;
+
+	mkdir -pv $STATIC_PATH/{images,scripts,styles}
+
+	rsync --archive --delete --force assets/images $STATIC_PATH/
+	uglifyjs assets/scripts/*.js --lint --output $STATIC_PATH/scripts/main.min.js
+	sass --update assets/styles:$STATIC_PATH/styles --style=compressed --sourcemap=none --no-cache
+
+	cd $ROOT_PATH
+	record_release_info
+}
+
+do_package(){
+	load_current_release
+	print "Packaging release '$RELEASE'"
+
+	cd $ROOT_PATH/public
+	mkdir -vp $BUILD_PATH
+	rm -f $PACKAGE_FILE
+
+	local dotevery=5
+	[[ "$PACKAGE_INCLUDE" ]] && dotevery=100
+
+	zip -r $PACKAGE_FILE $(git ls-files --cached -- . | grep -v -E '^(install.php|wire/)') \
+		site/templates/static/ $PACKAGE_INCLUDE | \
+		tee $ROOT_PATH/koi.log | awk "BEGIN{printf \"Compressing [\"} {if(NR%$dotevery==0)printf \".\"} END{print \"]\"}"
+
+	echo "$ARROW Package file: $PACKAGE_FILE"
+}
+
+do_upload(){
+	[[ -z "$TARGET_ENV" ]] && fail "Environment undefined"
+	load_current_release
+	ping_remote "verbose"
+
+	[[ ! "$BUILD_ENV" == "$TARGET_ENV" ]] && fail "Current build environment mismatch | BUILD_ENV=$BUILD_ENV, TARGET_ENV=$TARGET_ENV"
+
+	echo "$ARROW Uploading to '$FTP_URL'"
+	cd $ROOT_PATH
+
+	ftp -pinv $FTP_HOST <<-EXECUTE
+	user $FTP_USERNAME $FTP_PASSWORD
+	binary
+	mdelete $PROJECT_NAME-*.zip
+	put $PACKAGE_FILE $PACKAGE_BASENAME
+	put koi.php
+	bye
+	EXECUTE
+	[[ $? -ne 0 ]] && fail "ftp"
+
+	echo "$ARROW /koi.php?install=$PACKAGE_BASENAME"
+
+	return 0
+}
+
+do_install(){
+	[[ -z "$TARGET_ENV" ]] && fail "Environment undefined"
+	load_current_release
+	print "Installing"
+
+	curl "http://192.168.33.43:11180/koi.php?install=$PACKAGE_BASENAME"
+	[[ $? -ne 0 ]] && fail "curl"
+
+	return 0
+}
+
+do_deploy(){
+	[[ -z "$TARGET_ENV" ]] && fail "Environment undefined"
+
+	if [[ "production" == $TARGET_ENV ]]; then
+		read -p "Are you sure you want to deploy to '$TARGET_ENV' (y/n)? " -r
+		echo
+		[[ ! $REPLY =~ ^[Yy]$ ]] && exit 1;
+	fi
+
+	load_current_release
+	print "Deployment v$RELEASE | BUILD_ENV: $BUILD_ENV | HOST: $FTP_HOST"
+
+	ping_remote
+
+	do_build
+	do_package
+	do_upload
+	do_install
+
+	print "Done"
+	echo -e "\e[00;35mRelease \e[01;35m$TARGET_ENV@v$RELEASE has been deployed\e[0m"
+}
+
+do_status(){
+	ping_remote
+	print "Status"
+
+	ftp -pinv $FTP_HOST <<-EXECUTE
+	user $FTP_USERNAME $FTP_PASSWORD
+	dir /
+	bye
+	EXECUTE
+	[[ $? -ne 0 ]] && fail "ftp"
+}
+
+main(){
+	if declare -F do_$COMMAND &>/dev/null; then
+		load_environment_vars
+		cp /dev/null $ROOT_PATH/koi.log
+		do_$COMMAND
+	else
+		usage
+	fi
+}
+
+parse_options "$@"
+main

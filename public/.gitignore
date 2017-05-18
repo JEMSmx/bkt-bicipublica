@@ -24,6 +24,7 @@ wire/modules/AdminTheme/AdminThemeDefault/styles/sass/*.css
 site/assets/logs
 site/assets/files
 site/assets/sessions
+site/assets/backups
 site/assets/cache
 site/assets/active.php
 site/assets/installed.php

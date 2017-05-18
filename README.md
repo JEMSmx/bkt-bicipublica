@@ -46,6 +46,9 @@
 2. Duplicate `public/htaccess.txt` => `public/.htaccess`.
 3. Duplicate `public/site/config-sample.php` => `public/site/config.php`.
 4. Run installer.
+  * DB Name: _project-name_.
+  * DB User: `root`.
+  * DB Pass: `123`.
   * DB Host: `localhost` => `127.0.0.1`.
   * Add example.com, **www.**example.com in `$config->httpHosts`.
   * Account Information: `root`, `123456`, `root@localhost.local`.
