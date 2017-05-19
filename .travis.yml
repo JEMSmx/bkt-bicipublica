@@ -30,7 +30,7 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
-   - provider: script
+  - provider: script
     script: ./git-ftp push -s $TRAVIS_BRANCH -v -f
     skip_cleanup: true
     on:
