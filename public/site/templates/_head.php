@@ -17,7 +17,7 @@
 
  <!--  BKT Header-->
   <header id="header1">
-    <a href="/"><img src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/bkt-logotipo.svg" alt="Logotipo BKT bici pública SVG"></a>
+    <img src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/bkt-logotipo.svg" alt="Logotipo BKT bici pública SVG">
     <a id="close-icon" href=""><img src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/close-icon.svg" alt=""></a>
     <nav>
       <ul>
@@ -33,7 +33,7 @@
         <a href="/experiencia">
           <li>Experiencia</li>
         </a>
-        <a href="/nostros">
+        <a href="/nosotros">
           <li>Nosotros</li>
         </a>
         <a href="/contacto">

@@ -56,28 +56,28 @@
         <div class="bkt-aliance-body grid">
           <!--  Integrante numero uno  -->
           <div class="unit one-third">
-            <img src="assets/images/mario.png" alt="Mario Delgado Padilla">
+            <img src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/mario.png" alt="Mario Delgado Padilla">
             <h3>Mario Delgado Padilla</h3>
             <hr class="right">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos accusantium sed optio debitis quisquam iure repellendus quo facilis molestiae quae porro eius possimus, culpa a dolores error praesentium voluptatibus voluptates.</p>
           </div>
           <!--  Integrante numero uno  -->
           <div class="unit one-third">
-            <img src="assets/images/mario.png" alt="Mario Delgado Padilla">
+            <img src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/mario.png" alt="Mario Delgado Padilla">
             <h3>Mario Delgado Padilla</h3>
             <hr class="right">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos accusantium sed optio debitis quisquam iure repellendus quo facilis molestiae quae porro eius possimus, culpa a dolores error praesentium voluptatibus voluptates.</p>
           </div>
           <!--  Integrante numero uno  -->
           <div class="unit one-third">
-            <img src="assets/images/mario.png" alt="Mario Delgado Padilla">
+            <img src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/mario.png" alt="Mario Delgado Padilla">
             <h3>Mario Delgado Padilla</h3>
             <hr class="right">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos accusantium sed optio debitis quisquam iure repellendus quo facilis molestiae quae porro eius possimus, culpa a dolores error praesentium voluptatibus voluptates.</p>
           </div>
           <!--  Integrante numero uno  -->
           <div class="unit one-third">
-            <img src="assets/images/mario.png" alt="Mario Delgado Padilla">
+            <img src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/mario.png" alt="Mario Delgado Padilla">
             <h3>Mario Delgado Padilla</h3>
             <hr class="right">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos accusantium sed optio debitis quisquam iure repellendus quo facilis molestiae quae porro eius possimus, culpa a dolores error praesentium voluptatibus voluptates.</p>
