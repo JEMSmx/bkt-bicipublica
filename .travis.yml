@@ -1,10 +1,10 @@
 env:
   global:
-    - PROJECT_NAME=bkt-mobiliario
+    - PROJECT_NAME=bkt-bicipublica
     # master SHA256-606c78f9bd55e946b34762b7f54b65177eaa37a3fc42559ea62712cf30431b2b
     - secure: ""
     # beta SHA256-
-    - secure: "H/Q4zBvAlgj3vala9FaGdgpSIqAHO2dOTgCounCPuOL+YlTxssrFEGHbk2tskvWJofjJzYGupZPGYU0fa4e3NYpfmcMKiMMzv7rOu/YFGlJiJrXH5xK6WJcnpmKpG8wg89uM1v0b1+M/Hs/N6pguqj/OI+1XXq83/Dr2khufkCnLFjQPwrmi3Mzfl7Z/EdyQVbVv8vhp5NxvL2zgNdh0zK95NJWvVPXATgMSzlXwpnoUO5adkC2t+3R1m9wGawSUd1qhYL15iC0ARoOaY6z5KITPdEz2g2SVaGOlr/J3ItGQ4NFqVyLgUQ4UHONMQ1+axvn+pNvS9cEQ75GX4y3wQ4PSuHQu4TLfe70h3nIZgo/lcFqXx39X+HDwP08D6alGmhSGeR3fFerm48kgT1D+uxdZA+bkCV1aUgBU/XjJMgbyQsNkgDEKjX3u++AbjlgmsaYWpauWCFbEWD1Zrs13Mm30cI+RTTEm0ZLfcXs4G50iNlgKjtvw3vEZoFnhEuYuU5DWT1tiWws7XU01N1POrF97fGPLb2w+xvnJEst+wAFRWAcNKWQf23J6INsfd5K1UveMXNikS5azBQTOdX/hatykpzPBuSe9oYoz2eF4sxAZpTyMOuKlXuqIB0bzkj3yQ+WBDvkA52DbbeGq6G3F5tsYSJ+q7UMMumB9ChUbjAk="
+    - secure: "Zm5gLfnNKoNamrX1fnaaLclVKlVptpP6+xH1M8xDo7LbfGpuy5NOwkf2s8iEsbOE71Bav/8wTIcqIEZldExrq2V24AywB09PyPlBoShudXyDYk2aF3OjmH/FC7vOb47UPjTyDRrD5VJAcPbrTL4AXF+cGjCJgbqWL10zeXdFADVSJB430ugF+et59SgwYnCQEjTNspkGN7xwH6/XiLL3rllo6ZUG4rZDIIhAAoZ9ZHVzgpkb3C7IzxwCMeV9AGolHzWnx5VTe8pqTsEuoSZen3crTd7XbIlvVJeJNRwBnpTqs/CLbRmK7Jx0XTJm1OVT/4YL4mN3Bo43S6WtSbdniNoujnXbiYdNjXmze8vqs/sguutxz21xj7UkduMXNWBkYMBvY4vnZAiKDstXibgHQIFmJI/Onaw6S3l8EJIo4BgWwo5lGZOAuaLSZNTyN1SjSCdDhvdSbaIbGUiXqjxrCJWDxLnfGE1+pdm3V9V4oaSAfEj065pAQifHCtfhKswELQuFxXm49VFV3r+cYv3kRz0GHFXGS18iBcY5iyeMNvQIhEfiHXs80a6w+KRe3bypXe399fItSd+0hTdSAMP2AVLkLTLZdKjHguRSaHS/+GaIULhCeRY3Ga5YAULKRgsXUdX36WBtmsEQ2b6dm0ysgv+S8HlIRSGCZwrp68eBxQ4="
 script:
   - true
 notifications:
@@ -29,7 +29,12 @@ deploy:
     script: ./git-ftp push -s $TRAVIS_BRANCH -v -f
     skip_cleanup: true
     on:
-      all_branches: true
+      branch: master
+   - provider: script
+    script: ./git-ftp push -s $TRAVIS_BRANCH -v -f
+    skip_cleanup: true
+    on:
+      branch: beta
   # - provider: script
   #   script: ./git-ftp push -s $TRAVIS_BRANCH -v -f
   #   skip_cleanup: true
