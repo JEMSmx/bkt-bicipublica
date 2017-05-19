@@ -14,3 +14,33 @@
 </head>
 
 <body>
+
+ <!--  BKT Header-->
+  <header id="header1">
+    <img src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/bkt-logotipo.svg" alt="Logotipo BKT bici pública SVG">
+    <a id="close-icon" href=""><img src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/close-icon.svg" alt=""></a>
+    <nav>
+      <ul>
+        <a href="">
+          <li></li>
+        </a>
+        <a href="">
+          <li>Servicios</li>
+        </a>
+        <a href="">
+          <li>Tecnología</li>
+        </a>
+        <a href="">
+          <li>Experiencia</li>
+        </a>
+        <a href="">
+          <li>Nosotros</li>
+        </a>
+        <a href="">
+          <li>Contacto</li>
+        </a>
+      </ul>
+    </nav>
+    <img id="menu-icon" src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/menu-icon.svg" alt="Menu icon for BKTbp">
+    <img class="bktbp-logo" src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/bkt-logo.svg" alt="BKT bici publica logo bicicletita SVG">
+  </header>
