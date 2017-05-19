@@ -1,0 +1,21 @@
+.slider {
+  background-color: white;
+  background-image: url(https://dummyimage.com/600x400/fff/333);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: calc(100% - 120px);
+  .j-color-layer{
+    background-color: rgba($color-secondary, .85);
+    height: 100%;
+    .j-wrap {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        color: $color-inverse;
+      }
+    }
+  }
+}
