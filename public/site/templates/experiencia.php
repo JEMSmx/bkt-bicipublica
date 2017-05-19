@@ -54,7 +54,7 @@
         <p>
           Un sistema de bicicletas públicas cambia las reglas
           de juego en la ciudad: donde es implementado,
-          <strong>¡La gente lo adopta espatáneamente!</strong>
+          <strong>¡La gente lo adopta espontáneamente!</strong>
         </p>
         <hr>
       </div>

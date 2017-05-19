@@ -35,7 +35,7 @@
               <p id="exp-p-4" class="hidden">4 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
               <p id="exp-p-5" class="hidden">5 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
             </div>
-            <div class="image" style="background-image: url('assets/images/estacion.png');"></div>
+            <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1485995688/imagesestacion.png');"></div>
             <span class="explain-image-circle station-one"   onclick="toggleStationInfo(1)">1</span>
             <span class="explain-image-circle station-two"   onclick="toggleStationInfo(2)">2</span>
             <span class="explain-image-circle station-three" onclick="toggleStationInfo(3)">3</span>
@@ -72,7 +72,7 @@
               <p id="exp-bike-p-2" class="hidden">2 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
               <p id="exp-bike-p-3" class="hidden">3 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Adeermite modificar el tamaño de las estaciones según la demanda.</p>
             </div>
-            <div class="image" style="background-image: url('assets/images/bici-explicacion.png');"></div>
+            <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1485995688/imagesbici-explicacion.png');"></div>
             <span class="explain-image-circle bike-one"   onclick="toggleBikeInfo(1)">1</span>
             <span class="explain-image-circle bike-two"   onclick="toggleBikeInfo(2)">2</span>
             <span class="explain-image-circle bike-three" onclick="toggleBikeInfo(3)">3</span>

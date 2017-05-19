@@ -1,6 +1,9 @@
 <?php include('./_head.php'); ?>
   <!--  BKT Slides -->
-  <div class="j-workspace slider">
+<?php $image=$page->img1;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+  <div class="j-workspace slider" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
     <div class="j-color-layer">
      <div class="j-wrap">
        <h1>Diseño, implementación y operación de sistemas de <br> bicicletas públicas.</h1>
@@ -49,7 +52,10 @@
          <p>Contamos con el equipo y las alianzas especializadas en Urbanismo, Análisis vial, Gestión de Proyectos, Área Jurídica, así como la relación con grupos ciudadanos interesados en cambiar el paradigma actual de ciudad.</p>
          <a class="bkt-btn" href="">Saber más</a>
        </div>
-       <div class="bkt-features-wrap-photo" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+       <?php $image=$page->img2;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
        </div>
      </div>
    </section>
@@ -57,7 +63,10 @@
    <section class="bkt-features j-bg-color-inverse">
      <div class="bkt-features-wrap ">
        <!--  The next container show a photo in desktop and hidden in mobile for esthetic reason  -->
-       <div class="bkt-features-wrap-photo desktop" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+       <?php $image=$page->img3;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo desktop" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
        </div>
        <div class="bkt-features-wrap-text">
          <h2>Asesoría</h2>
@@ -65,7 +74,10 @@
          <hr class="right">
        </div>
        <!--  The next container show a photo in mobile and hidden in desktop for esthetic reason  -->
-       <div class="bkt-features-wrap-photo mobile" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+       <?php $image=$page->img3;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo mobile" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
        </div>
      </div>
    </section>
@@ -104,13 +116,17 @@
            <li> Alta aceptación ciudadana a bajo costo</li>
          </ul>
        </div>
-       <div class="bkt-features-wrap-photo fifthy-percent" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+       <?php $image=$page->img4;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
        </div>
      </div>
    </section>
    <!--  BKT Mensaje Jumbo-->
    <!--  For the correct re-use of the element is nesesary the inline image  -->
-   <section class="bkt-jumbo-message-blue" style=" background-image: url('http://theradavist.com/wp-content/uploads/2017/05/RHCBrooklyn2017-3958-1335x890.jpg');">
+   <?php $image=$page->img5;?>
+   <section class="bkt-jumbo-message-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
      <div class="blue-layer">
        <div class="j-wrap">
         <p>
