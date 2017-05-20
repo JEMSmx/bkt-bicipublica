@@ -77,7 +77,7 @@
           var map = new google.maps.Map(mapElement, mapOptions);
           // Let's also add a marker while we're at it
           var image = {
-            url:'assets/images/location-bkt-bicipublica.png',
+            url:'<?php echo $config->urls->templates; ?>static/455375-1485995688/images/location-bkt-bicipublica.png',
           };
           var contentString = '<div id="content">'+
               '<div id="siteNotice">'+
