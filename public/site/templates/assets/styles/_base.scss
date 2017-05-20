@@ -116,6 +116,10 @@ img {
     max-width: 100%; // Hacer todas las img responsive.
 }
 .hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.display-hidden{
   display: none;
 }
 .j-content-50 {

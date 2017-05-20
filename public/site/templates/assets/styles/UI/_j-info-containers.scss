@@ -303,6 +303,9 @@
         max-width: 947px;
         margin: 0 auto;
         width: 100%;
+        h4{
+          transition: visibility 0s, opacity 0.5s linear;
+        }
         .image{
           padding-top: 45%;
           width: 100%;
