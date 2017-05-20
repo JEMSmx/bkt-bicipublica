@@ -4,14 +4,13 @@
    <section class="bkt-features for-titles j-bg-gray-lighter">
       <div class="bkt-features-wrap for-titles">
         <div class="bkt-features-wrap-middle-down-title">
-          <h1>¿Qué Hacemos?</h1>
+          <h1><?php echo $page->title; ?></h1>
           <p class="sub-title">
-            Solución integral para la implementación <br>
-            de <strong>sistemas de bicicletas públicas (SBP)</strong>
+            <?php echo str_replace("<p>", "", $page->txt1); ?>
           </p>
           <div class="paragraph">
-            <p>Un sistema de bicicletas públicas es un sistema de transporte público complejo y masivo que requiere de un equipo experimentado para integrarlo de la mejor manera en la ciudad.</p>
-            <p> Nuestro equipo de especialistas trabaja en diferentes áreas para hacer posible la integración de un SBP llave en mano, como una política pública con altas expectativas de éxito.</p>
+            <p><?php echo $page->txt2; ?></p>
+            <p><?php echo $page->txt3; ?></p>
           </div>
         </div>
       </div>
@@ -19,10 +18,7 @@
    <!--  BKT Mensaje Jumbo-->
    <section class="bkt-jumbo-message">
      <div class="j-wrap">
-       <p>
-         <strong>Estamos especializados</strong> en la solución integral de <br>
-         proyectos e infraestructura para el ciclismo urbano.
-       </p>
+       <?php echo $page->txt4; ?>
        <hr>
      </div>
    </section>
@@ -68,8 +64,8 @@
                 C73.7,54.6,73.7,54,73.3,53.6z"/>
             </g>
             </svg>
-          <h2>Diseño</h2>
-          <p>Proceso en el que se definen polígonos, ubicación y dimensión de estaciones; en esta etapa también se trabajan esquemas de operación y funcionamiento del sistema, según las necesidades de cada ciudad.</p>
+          <h2><?php echo $page->title1; ?></h2>
+          <p><?php echo $page->txt5; ?></p>
           <hr class="right">
         </div>
         <!--  The next container show a photo in mobile and hidden in desktop for esthetic reason  -->
@@ -84,16 +80,8 @@
    <section class="bkt-features j-bg-gray-dark">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-text fifthy-percent">
-          <h2 class="j-color-inverse">En esta etapa desarrollamos:</h2>
-          <ul >
-            <li class="j-color-inverse">Diagnóstico de la ciudad. </li>
-            <li class="j-color-inverse">Definición de polígonos de intervención. </li>
-            <li class="j-color-inverse">Diseño de la red, dimensión y capacidad de estaciones.</li>
-            <li class="j-color-inverse">Proyección y definición de metas, diseño del modelo de </li>
-            <li class="j-color-inverse">    negocio.</li>
-            <li class="j-color-inverse">Diseño de intervenciones  urbanas. </li>
-            <li class="j-color-inverse">Diseño de imagen del programa.</li>
-          </ul>
+          <h2 class="j-color-inverse"><?php echo $page->title2; ?></h2>
+          <?php echo str_replace('<li>', '<li class="j-color-inverse"', $page->txt6); ?>
         </div>
         <?php $image=$page->img2;
         if($image)
@@ -123,10 +111,8 @@
               c2,2.1,4.7,3.3,7.6,3.3c2.9,0,5.7-1.2,7.8-3.3l5.2-5.2c0.6,5.1-1.2,10.6-5.1,14.4c-3.2,3.4-7.6,5.2-12.3,5.2c-2.6,0-5.3-0.6-7.7-1.7
               l-0.9-0.4L56.5,45.6z"/>
             </svg>
-          <h2>Implementación:</h2>
-          <p>
-            Nuestros equipo técnico, capacitado por PBSC (Montréal Canadá) tiene la experiencia para garantizar la puesta a punto óptima del equipamiento, su configuración y pruebas necesarias previo a su instalación en calle.
-          </p>
+          <h2><?php echo $page->title3; ?></h2>
+          <?php echo $page->txt7; ?>
           <hr class="right">
         </div>
         <?php $image=$page->img3;
@@ -139,11 +125,7 @@
    <!--  BKT Mensaje Jumbo-->
    <section class="bkt-jumbo-message">
      <div class="j-wrap">
-       <p>
-         La implementación de nuestro sistema va más allá de la <br>
-         puesta a punto del equipamiento, en esta etapa podemos <br>
-         definir todos los <strong>detalles técnicos, gestión institucional y social.</strong>
-       </p>
+       <?php echo $page->txt8; ?>
        <hr>
      </div>
    </section>
@@ -157,15 +139,7 @@
        <div class="bkt-features-wrap-photo desktop" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
         <div class="bkt-features-wrap-text fifthy-percent">
-          <p>Trabajamos con metodologías que nos permiten involucrar a los vecinos en el proceso de decisión de la ubicación puntual de las estaciones, paralelamente se vincula a iniciativas ciudadanas, gobierno y se inserta en el marco de la política pública en torno a la movilidad no motorizada con el apoyo del despacho <strong><a href="http://www.cuadraurbanismo.com/">cuadra urbanismo</a></strong>.</p>
-          <ul>
-            <li>Ensamble y puesta a punto de equipamiento y bicicletas</li>
-            <li>Integración de tecnologías</li>
-            <li>Configuraciones y puesta a punto de software</li>
-            <li>Gestión institucional</li>
-            <li>Gestión social – Socialización</li>
-            <li>Despliegue e instalación en calle</li>
-          </ul>
+          <?php echo $page->txt9; ?>
         </div>
         <!--  The next container show a photo in mobile and hidden in desktop for esthetic reason  -->
         <?php $image=$page->img4;
@@ -202,10 +176,8 @@
                M41.8,25.2c-9.2,0-16.7,7.5-16.7,16.7c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C58.5,32.6,51,25.2,41.8,25.2z M41.8,55.4
               c-7.5,0-13.5-6.1-13.5-13.5c0-7.5,6.1-13.5,13.5-13.5c7.5,0,13.5,6.1,13.5,13.5C55.3,49.3,49.3,55.4,41.8,55.4z"/>
           </svg>
-          <h2>Operación</h2>
-          <p>
-            Nuestra basta experiencia nos permite gestionar el sistema con altos estándares y calidad en el servicio. Nuestro principal objetivo es que el usuario siempre tenga la mejor experiencia y prefiera hacer sus viajes en nuestro sistema: bicicletas en perfecto estado, estaciones siempre limpias y funcionales, oferta equilibrada de espacios y bicicletas disponibles, atención y ágil respuesta a sus dudas en nuestros diferentes canales de comunicación, accesibilidad y seguridad. 
-          </p>
+          <h2><?php echo $page->title4; ?></h2>
+          <?php echo $page->txt10; ?>
           <hr class="right">
         </div>
         <?php $image=$page->img5;
@@ -225,15 +197,7 @@
        <div class="bkt-features-wrap-photo desktop" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
         <div class="bkt-features-wrap-text fifthy-percent">
-          <p>Desarrollamos nuestras propias herramientas de software para el control de todos los elementos del sistema, esto nos permite adaptarnos a las diferentes necesidades de cada ciudad.</p>
-          <ul>
-            <li>Ensamble y puesta a punto de equipamiento y bicicletas</li>
-            <li>Integración de tecnologías</li>
-            <li>Configuraciones y puesta a punto de software</li>
-            <li>Gestión institucional</li>
-            <li>Gestión social – Socialización</li>
-            <li>Despliegue e instalación en calle</li>
-          </ul>
+          <?php echo $page->txt11; ?>
         </div>
         <!--  The next container show a photo in mobile and hidden in desktop for esthetic reason  -->
         <?php $image=$page->img6;
@@ -250,8 +214,8 @@
      <div class="blue-layer">
        <div class="j-wrap">
         <p>
-          <strong>¿por qué implementar un sistema de bicicletas públicas?</strong> <br>
-          Posiciona fácilmente en la opinión pública la idea de transportarse en bicicleta de forma convencional
+          <strong><?php echo $page->title5; ?></strong> <br>
+          <?php echo $page->txt12; ?>
         </p>
         <hr>
       </div>
