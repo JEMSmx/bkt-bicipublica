@@ -4,10 +4,9 @@
    <section class="bkt-features for-titles-contact j-bg-gray-lighter">
       <div class="bkt-features-wrap for-titles-contact">
         <div class="bkt-features-wrap-middle-down-title">
-          <h1>Contacto</h1>
+          <h1><?php echo $page->title; ?></h1>
           <p class="sub-title">
-            Nos gustaría escuchar acerca de tu proyecto o tus ideas. Si estas interesado en nuestros servicios <br>
-            <strong>contáctanos</strong>
+             <?php echo str_replace("<p>", "", $page->txt1); ?>
           </p>
         </div>
       </div>
@@ -17,23 +16,21 @@
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-text fifthy-percent">
           <h3>Dirección</h3>
-          <p>
-            Colonias 221 Piso 12, Col. Americana, cp 44160, <br>
-            Guadalajara, México
-          </p>
+             <?php echo $page->title5; ?><br>
+            <?php echo $page->title2; ?>
           <h3>Teléfono</h3>
           <p>
-            <a href="tel:38263655">(33) 3826 3655</a>
+            <a href="tel:<?php echo $page->title3; ?>"><?php echo $page->title3; ?></a>
           </p>
           <h3>Correo electronico</h3>
           <p>
-            <a href="mailto:info@bktbicipublica.com">info@bktbicipublica.com</a>
+            <a href="mailto:<?php echo $page->title4; ?>"><?php echo $page->title4; ?></a>
           </p>
         </div>
        <?php $image=$page->img1;
         if($image)
           $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
-       <div id="bkt-contact-map" class="bkt-features-wrap-photo fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
+       <div id="bkt-contact-map" class="bkt-features-wrap-photo fifthy-percent">
         </div>
       </div>
     </section>
@@ -43,24 +40,15 @@
    <section class="bkt-jumbo-message-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
      <div class="blue-layer">
        <div class="j-wrap">
-        <p>
-          <strong>¿por qué implementar un sistema de bicicletas públicas?</strong> <br>
-          Posiciona fácilmente en la opinión pública la idea de transportarse en bicicleta de forma convencional
-        </p>
+          <strong><?php echo $page->title1; ?></strong> <br>
+          <?php echo $page->txt2; ?>
         <hr>
       </div>
      </div>
     </section>
   </main>
 <?php include('./_foot.php'); ?>
-  <script>
-    function toggleHeaderResponsive() {
-      $('header').toggleClass("mobile-active")
-    }
-    document.getElementById("menu-icon").addEventListener('click', toggleHeaderResponsive);
-    document.getElementById("close-icon").addEventListener('click', toggleHeaderResponsive);
-  </script>
-  <script type="text/javascript">
+   <script type="text/javascript">
       // When the window has finished loading create our google map below
       google.maps.event.addDomListener(window, 'load', init);
 
