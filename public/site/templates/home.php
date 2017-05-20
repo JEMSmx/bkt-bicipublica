@@ -90,12 +90,12 @@
         <div class="text">
           <div class="subtitle-container">
             <p class="sub-title">
-              <?php echo $page->txt4; ?>
+              <?php echo str_replace("<p>", "", $page->txt4); ?>
             </p>
             <hr class="right">
           </div>
-          <p><?php echo $page->txt5; ?></p>
-          <p><?php echo $page->txt6; ?></p>
+          <?php echo $page->txt5; ?>
+          <?php echo $page->txt6; ?>
         </div>
        </div>
      </div>
@@ -122,7 +122,7 @@
        <div class="j-wrap">
         <p>
           <strong><?php echo $page->title5; ?></strong> <br>
-          S<?php echo $page->txt8; ?>
+          <?php echo $page->txt8; ?>
         </p>
         <hr>
       </div>
