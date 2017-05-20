@@ -30,7 +30,7 @@
             <a href="mailto:info@bktbicipublica.com">info@bktbicipublica.com</a>
           </p>
         </div>
-        <<?php $image=$page->img1;
+       <?php $image=$page->img1;
         if($image)
           $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
        <div id="bkt-contact-map" class="bkt-features-wrap-photo fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
