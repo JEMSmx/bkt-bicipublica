@@ -16,7 +16,8 @@
       </div>
     </section>
     <!--  BKT Fortalezas = Bikla-->
-    <section class="bkt-features j-bg-gray-regular">
+    <?php $image=$page->img6;?>
+   <section class="bkt-features j-bg-gray-regular <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-middle-down-text">
          <h2><?php echo $page->title1; ?><sup>r</sup></h2>
@@ -34,8 +35,7 @@
       </div>
     </section>
     <!--  BKT Fortalezas = Bikla about-->
-     <?php $image=$page->img6;?>
-   <section class="bkt-features j-bg-color-warning <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
+    <section class="bkt-features j-bg-color-warning">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-text fifthy-percent">
           <?php echo $page->txt7; ?>
@@ -85,11 +85,12 @@
        <div class="bkt-features-wrap-photo desktop" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
         <div class="bkt-features-wrap-text fifthy-percent">
-          <h2><?php echo $page->title4; ?></h2>
+          <h2><?php echo $page->title4; ?>
           <br>
            <span class="title-lighter">
             <?php echo $page->title5; ?>
           </span>
+          </h2>
           <hr class="right">
           <?php echo $page->txt11; ?>
         </div>
@@ -140,14 +141,16 @@
    <section class="bkt-features j-bg-gray-lighter">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-text fifthy-percent">
-          <h2><?php echo $page->title8; ?></h2>
-          <br>
-          <span class="title-lighter">
-            <?php echo $page->title9; ?>
-          </span>
+          <h2><?php echo $page->title8; ?>
+            <br>
+            <span class="title-lighter">
+              <?php echo $page->title9; ?>
+            </span>
+          </h2>
           <hr class="right">
           <?php echo $page->txt14; ?>
         </div>
+
         <?php $image=$page->img5;
         if($image)
           $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
