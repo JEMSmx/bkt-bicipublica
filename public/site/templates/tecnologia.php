@@ -1,7 +1,7 @@
 <?php include('./_head.php'); ?>
- <main class="j-workspace">
+<main class="j-workspace">
    <!--  BKT Title-->
-    <section class="bkt-features for-titles j-bg-gray-lighter">
+    <section class="bkt-features for-titles j-bg-gray-ghost">
       <div class="bkt-features-wrap for-titles">
         <div class="bkt-features-wrap-middle-down-title">
           <h1>Tecnología</h1>
@@ -17,25 +17,37 @@
       </div>
     </section>
     <!--  Explicación  -->
-    <section class="bkt-features j-bg-gray-light">
+    <section class="bkt-features j-bg-gray-lighter">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-explain-image">
           <h2>Tecnología</h2>
           <div class="image-container">
-           <div class="message-for-station">
-              <h4 id="exp-t-1">1.- Modulable</h4>
-              <h4 id="exp-t-2" class="hidden">2.- Modulable</h4>
-              <h4 id="exp-t-3" class="hidden">3.- Modulable</h4>
-              <h4 id="exp-t-4" class="hidden">4.- Modulable</h4>
-              <h4 id="exp-t-5" class="hidden">5.- Modulable</h4>
+           <div id="exp-station-1" class="message-for-station">
+              <h4>1.- Modulable</h4>
               <hr class="right">
-              <p id="exp-p-1">1 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
-              <p id="exp-p-2" class="hidden">2 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
-              <p id="exp-p-3" class="hidden">3 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
-              <p id="exp-p-4" class="hidden">4 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
-              <p id="exp-p-5" class="hidden">5 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
+              <p>1 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
             </div>
-            <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1485995688/images/estacion.png');"></div>
+           <div id="exp-station-2" class="message-for-station display-hidden">
+              <h4>2.- Modulable</h4>
+              <hr class="right">
+              <p>2 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
+            </div>
+           <div id="exp-station-3" class="message-for-station display-hidden">
+              <h4>3.- Modulable</h4>
+              <hr class="right">
+              <p>3 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
+            </div>
+           <div id="exp-station-4" class="message-for-station display-hidden">
+              <h4>4.- Modulable</h4>
+              <hr class="right">
+              <p>4 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
+            </div>
+           <div id="exp-station-5" class="message-for-station display-hidden">
+              <h4>5.- Modulable</h4>
+              <hr class="right">
+              <p>5 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
+            </div>
+            <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1495244812/images/estacion.png');"></div>
             <span class="explain-image-circle station-one"   onclick="toggleStationInfo(1)">1</span>
             <span class="explain-image-circle station-two"   onclick="toggleStationInfo(2)">2</span>
             <span class="explain-image-circle station-three" onclick="toggleStationInfo(3)">3</span>
@@ -57,22 +69,28 @@
      </div>
    </section>
     <!--  Explicación  -->
-    <section class="bkt-features j-bg-gray-light">
+    <section class="bkt-features j-bg-gray-lighter">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-explain-image">
           <h2>La Bicicleta</h2>
           <p class="j-content-50">Nuestra bicicleta se ha convertido en el ícono de los sistemas de bicicletas públicas en el mundo por su diseño, manejo y confiabilidad. Bicicleta robusta pero de fácil manejo durable y atractiva, fabricada aleaciones de aluminio y procesos de alta ingeniería. </p>
           <div class="image-container">
-           <div class="message-for-station">
-              <h4 id="exp-bike-t-1">1.- Manubrio</h4>
-              <h4 id="exp-bike-t-2" class="hidden">2.- Cuadro</h4>
-              <h4 id="exp-bike-t-3" class="hidden">3.- Llantas</h4>
+            <div id="exp-bike-1" class="message-for-station">
+              <h4>1.- Manubrio</h4>
               <hr class="right">
-              <p id="exp-bike-p-1">1 De una sola pieza para protegertodos los componentes</p>
-              <p id="exp-bike-p-2" class="hidden">2 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
-              <p id="exp-bike-p-3" class="hidden">3 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Adeermite modificar el tamaño de las estaciones según la demanda.</p>
+              <p>1 De una sola pieza para protegertodos los componentes</p>
             </div>
-            <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1485995688/images/bici-explicacion.png');"></div>
+            <div id="exp-bike-2" class="message-for-station display-hidden">
+              <h4>2.- Cuadro</h4>
+              <hr class="right">
+              <p>2 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
+            </div>
+            <div id="exp-bike-3" class="message-for-station display-hidden">
+              <h4>3.- Llantas</h4>
+              <hr class="right">
+              <p>3 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Adeermite modificar el tamaño de las estaciones según la demanda.</p>
+            </div>
+            <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1495244812/images/bici-explicacion.png');"></div>
             <span class="explain-image-circle bike-one"   onclick="toggleBikeInfo(1)">1</span>
             <span class="explain-image-circle bike-two"   onclick="toggleBikeInfo(2)">2</span>
             <span class="explain-image-circle bike-three" onclick="toggleBikeInfo(3)">3</span>
@@ -80,19 +98,24 @@
         </div>
       </div>
     </section>
-    <!--  BKT Mensaje Jumbo-->
-    <!--  For the correct re-use of the element is nesesary the inline image  -->
-   <?php $image=$page->img1;?>
-   <section class="bkt-jumbo-message-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
-    <div class="blue-layer">
-      <div class="j-wrap">
-       <p>
-         <strong>¿por qué implementar un sistema de bicicletas públicas?</strong> <br>
-         Posiciona fácilmente en la opinión pública la idea de transportarse en bicicleta de forma convencional
-       </p>
-       <hr>
-     </div>
-    </div>
-   </section>
-  </main>
 <?php include('./_foot.php'); ?>
+ <script>
+    function toggleStationInfo(number){
+      var x=0;
+      for (x = 1; x < 6; x++){
+        console.log ("Test" + x);
+        $( "#exp-station-" + x ).fadeOut();
+      }
+      $( "#exp-station-" + number ).fadeIn();
+    }
+    function toggleBikeInfo(number){
+      var x=0;
+      for (x = 1; x < 4; x++){
+        $( "#exp-bike-" + x ).fadeOut();
+      }
+//       $( "#exp-bike-" + number ).removeClass('hidden');
+       $( "#exp-bike-" + number ).fadeIn();
+      
+      
+    }
+  </script>
