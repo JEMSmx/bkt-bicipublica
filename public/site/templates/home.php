@@ -82,7 +82,8 @@
      </div>
    </section>
    <!--  BKT Fortalezas = Transporte Masivo-->
-   <section class="bkt-features j-bg-gray-regular">
+  <?php $image=$page->img6;?>
+   <section class="bkt-features j-bg-gray-regular" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
      <div class="bkt-features-wrap">
        <div class="bkt-features-wrap-middle-down-text">
         <h2>Transporte Masivo</h2>
