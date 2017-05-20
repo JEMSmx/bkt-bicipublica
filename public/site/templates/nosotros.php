@@ -40,7 +40,10 @@
       </div>
     </section>
     <!--  BKT Mensaje Jumbo-->
-    <section class="bkt-jumbo-message" style="background-image:url('https://dummyimage.com/1200x500/000/fff');min-height: 400px;">
+    <?php $image=$page->img1;
+        if($image)
+          $img_thumb= $image->size(1200,500, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+    <section class="bkt-jumbo-message" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>min-height: 400px;">
       <div class="j-wrap">
       </div>
     </section>

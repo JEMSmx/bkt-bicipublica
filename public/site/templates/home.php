@@ -2,7 +2,7 @@
   <!--  BKT Slides -->
 <?php $image=$page->img1;
         if($image)
-          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+          $img_thumb= $image->height(400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
   <div class="j-workspace slider" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
     <div class="j-color-layer">
      <div class="j-wrap">

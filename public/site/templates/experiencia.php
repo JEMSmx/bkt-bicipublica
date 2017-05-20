@@ -44,7 +44,10 @@
            <strong>El programa estuvo vigente hasta el año 2012, con una red de más de 40 estaciones y 150 bicicletas, 5,000 usuarios aproximadamente</strong>
           </p>
         </div>
-        <div class="bkt-features-wrap-photo fifthy-percent" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+        <?php $image=$page->img1;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
       </div>
     </section>
@@ -74,7 +77,10 @@
           <p class="j-color-inverse">En Noviembre de 2014 en la ciudad de Guadalajara, México iniciamos la operación del sistema MIBICI. Red de 116 estaciones y 1260 bicicletas en su primer fase más 120 estaciones para la segunda fase, llegando a 236 estaciones y más de 2 mil bicicletas.</p>
           <p class="j-color-inverse">Aportamos nuestra experiencia desde la etapa de implementación, integración de tecnología en conjunto con las instituciones financieras y gobierno, ensambles y puesta a punto del equipamiento y finalmente la instalación en calle. </p>
         </div>
-        <div class="bkt-features-wrap-photo fifthy-percent" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+        <?php $image=$page->img2;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
       </div>
     </section>
@@ -82,7 +88,10 @@
    <section class="bkt-features j-bg-gray-lighter">
       <div class="bkt-features-wrap ">
         <!--  The next container show a photo in desktop and hidden in mobile for esthetic reason  -->
-        <div class="bkt-features-wrap-photo desktop" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+        <?php $image=$page->img3;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo desktop" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
         <div class="bkt-features-wrap-text fifthy-percent">
           <h2>MIBICI Guadalajara</h2>
@@ -91,7 +100,10 @@
           <p>Creemos que la experiencia del usuario debe ser la mejor, de esta forma MIBICI prevalecerá como una verdadera opción de transporte, aportando beneficios económicos, sociales y ambientales a la ciudad y sus habitantes.</p>
         </div>
         <!--  The next container show a photo in mobile and hidden in desktop for esthetic reason  -->
-        <div class="bkt-features-wrap-photo mobile fifthy-percent" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+        <?php $image=$page->img3;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo mobile fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
       </div>
     </section>
@@ -109,7 +121,10 @@
    <section class="bkt-features j-bg-gray-dark">
       <div class="bkt-features-wrap ">
         <!--  The next container show a photo in desktop and hidden in mobile for esthetic reason  -->
-        <div class="bkt-features-wrap-photo desktop" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+        <?php $image=$page->img4;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo desktop" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
         <div class="bkt-features-wrap-text fifthy-percent">
           <h2 class="j-color-inverse">
@@ -124,7 +139,10 @@
           <p class="j-color-inverse">Nuestra participación en la ciudad de Toluca ha sido indispensable para el sistema Huizi, sobre todo por la particularidad de su esquema, donde la administración local se ha responsabilizado completamente de la operación del sistema con sus propios recursos. </p>
         </div>
         <!--  The next container show a photo in mobile and hidden in desktop for esthetic reason  -->
-        <div class="bkt-features-wrap-photo mobile fifthy-percent" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+        <?php $image=$page->img4;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo mobile fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
       </div>
     </section>
@@ -138,7 +156,10 @@
             BKT bici pública tuvimos la responsabilidad de acompañar al equipo de gobierno con asesoría y supervisión desde la recepción de equipamiento, puesta a punto e instalación en calle. Aportamos nuestra experiencia para agilizar los procesos, garantizar la calidad del equipamiento y alcanzar las metas establecidas.
           </p>
         </div>
-        <div class="bkt-features-wrap-photo fifthy-percent" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+        <?php $image=$page->img5;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
       </div>
     </section>

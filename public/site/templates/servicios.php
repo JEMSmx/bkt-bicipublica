@@ -30,7 +30,10 @@
    <section class="bkt-features j-bg-gray-lighter">
       <div class="bkt-features-wrap ">
         <!--  The next container show a photo in desktop and hidden in mobile for esthetic reason  -->
-        <div class="bkt-features-wrap-photo desktop" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+      <?php $image=$page->img1;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo desktop" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
         <div class="bkt-features-wrap-text fifthy-percent">
           <svg version="1.0" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -70,7 +73,10 @@
           <hr class="right">
         </div>
         <!--  The next container show a photo in mobile and hidden in desktop for esthetic reason  -->
-        <div class="bkt-features-wrap-photo mobile fifthy-percent" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+        <?php $image=$page->img1;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo mobile fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
       </div>
     </section>
@@ -89,7 +95,10 @@
             <li class="j-color-inverse">Diseño de imagen del programa.</li>
           </ul>
         </div>
-        <div class="bkt-features-wrap-photo fifthy-percent" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+        <?php $image=$page->img2;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
       </div>
     </section>
@@ -120,7 +129,10 @@
           </p>
           <hr class="right">
         </div>
-        <div class="bkt-features-wrap-photo fifthy-percent" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+        <?php $image=$page->img3;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo mobile fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
       </div>
     </section>
@@ -139,7 +151,10 @@
    <section class="bkt-features j-bg-color-warning">
       <div class="bkt-features-wrap ">
         <!--  The next container show a photo in desktop and hidden in mobile for esthetic reason  -->
-        <div class="bkt-features-wrap-photo desktop" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+        <?php $image=$page->img4;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo desktop" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
         <div class="bkt-features-wrap-text fifthy-percent">
           <p>Trabajamos con metodologías que nos permiten involucrar a los vecinos en el proceso de decisión de la ubicación puntual de las estaciones, paralelamente se vincula a iniciativas ciudadanas, gobierno y se inserta en el marco de la política pública en torno a la movilidad no motorizada con el apoyo del despacho <strong><a href="http://www.cuadraurbanismo.com/">cuadra urbanismo</a></strong>.</p>
@@ -153,7 +168,10 @@
           </ul>
         </div>
         <!--  The next container show a photo in mobile and hidden in desktop for esthetic reason  -->
-        <div class="bkt-features-wrap-photo mobile fifthy-percent" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+        <?php $image=$page->img4;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo mobile fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
       </div>
     </section>
@@ -190,7 +208,10 @@
           </p>
           <hr class="right">
         </div>
-        <div class="bkt-features-wrap-photo fifthy-percent" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+        <?php $image=$page->img5;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
       </div>
     </section>
@@ -198,7 +219,10 @@
    <section class="bkt-features j-bg-gray-lighter">
       <div class="bkt-features-wrap ">
         <!--  The next container show a photo in desktop and hidden in mobile for esthetic reason  -->
-        <div class="bkt-features-wrap-photo desktop" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+        <?php $image=$page->img6;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo desktop" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
         <div class="bkt-features-wrap-text fifthy-percent">
           <p>Desarrollamos nuestras propias herramientas de software para el control de todos los elementos del sistema, esto nos permite adaptarnos a las diferentes necesidades de cada ciudad.</p>
@@ -212,13 +236,17 @@
           </ul>
         </div>
         <!--  The next container show a photo in mobile and hidden in desktop for esthetic reason  -->
-        <div class="bkt-features-wrap-photo mobile fifthy-percent" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
+        <?php $image=$page->img6;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div class="bkt-features-wrap-photo mobile fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
       </div>
     </section>
    <!--  BKT Mensaje Jumbo-->
    <!--  For the correct re-use of the element is nesesary the inline image  -->
-   <section class="bkt-jumbo-message-blue" style=" background-image: url('http://theradavist.com/wp-content/uploads/2017/05/RHCBrooklyn2017-3958-1335x890.jpg');">
+    <?php $image=$page->img7;?>
+   <section class="bkt-jumbo-message-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
      <div class="blue-layer">
        <div class="j-wrap">
         <p>

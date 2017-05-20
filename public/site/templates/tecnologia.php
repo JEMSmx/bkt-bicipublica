@@ -35,7 +35,7 @@
               <p id="exp-p-4" class="hidden">4 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
               <p id="exp-p-5" class="hidden">5 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
             </div>
-            <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1485995688/imagesestacion.png');"></div>
+            <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1485995688/images/estacion.png');"></div>
             <span class="explain-image-circle station-one"   onclick="toggleStationInfo(1)">1</span>
             <span class="explain-image-circle station-two"   onclick="toggleStationInfo(2)">2</span>
             <span class="explain-image-circle station-three" onclick="toggleStationInfo(3)">3</span>
@@ -72,7 +72,7 @@
               <p id="exp-bike-p-2" class="hidden">2 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
               <p id="exp-bike-p-3" class="hidden">3 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Adeermite modificar el tamaño de las estaciones según la demanda.</p>
             </div>
-            <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1485995688/imagesbici-explicacion.png');"></div>
+            <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1485995688/images/bici-explicacion.png');"></div>
             <span class="explain-image-circle bike-one"   onclick="toggleBikeInfo(1)">1</span>
             <span class="explain-image-circle bike-two"   onclick="toggleBikeInfo(2)">2</span>
             <span class="explain-image-circle bike-three" onclick="toggleBikeInfo(3)">3</span>
@@ -82,7 +82,8 @@
     </section>
     <!--  BKT Mensaje Jumbo-->
     <!--  For the correct re-use of the element is nesesary the inline image  -->
-   <section class="bkt-jumbo-message-blue" style=" background-image: url('http://theradavist.com/wp-content/uploads/2017/05/RHCBrooklyn2017-3958-1335x890.jpg');">
+   <?php $image=$page->img1;?>
+   <section class="bkt-jumbo-message-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
     <div class="blue-layer">
       <div class="j-wrap">
        <p>

@@ -30,14 +30,17 @@
             <a href="mailto:info@bktbicipublica.com">info@bktbicipublica.com</a>
           </p>
         </div>
-        <div id="bkt-contact-map" class="bkt-features-wrap-photo fifthy-percent" style="background-image: url('https://dummyimage.com/600x400/000/fff');">
-          
+        <<?php $image=$page->img1;
+        if($image)
+          $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
+       <div id="bkt-contact-map" class="bkt-features-wrap-photo fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
         </div>
       </div>
     </section>
     <!--  BKT Mensaje Jumbo-->
     <!--  For the correct re-use of the element is nesesary the inline image  -->
-    <section class="bkt-jumbo-message-blue" style=" background-image: url('http://theradavist.com/wp-content/uploads/2017/05/RHCBrooklyn2017-3958-1335x890.jpg');">
+    <?php $image=$page->img2;?>
+   <section class="bkt-jumbo-message-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
      <div class="blue-layer">
        <div class="j-wrap">
         <p>
