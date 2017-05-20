@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,600,900" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" integrity="sha256-K3Njjl2oe0gjRteXwX01fQD5fkk9JFFBdUHy/h38ggY=" crossorigin="anonymous" rel="stylesheet">
   <link href="https://cdn.rawgit.com/cobyism/gridism/0.2.2/gridism.css" rel="stylesheet">
-  <link href="<?php echo $config->urls->templates; ?>assets/styles/main.css" rel="stylesheet">
+  <link href="<?php echo $config->urls->templates; ?>static/455375-1485995688/styles/main.css" rel="stylesheet">
 </head>
 
 <body>

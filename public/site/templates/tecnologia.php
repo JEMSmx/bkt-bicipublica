@@ -4,14 +4,13 @@
     <section class="bkt-features for-titles j-bg-gray-ghost">
       <div class="bkt-features-wrap for-titles">
         <div class="bkt-features-wrap-middle-down-title">
-          <h1>Tecnología</h1>
+          <h1><?php echo $page->title; ?></h1>
           <p class="sub-title">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Quasi incidunt 
-            <strong>rem magni consequatur ratione veritatis quidem totam dolor!</strong>
+            <?php echo str_replace("<p>", "", $page->txt1); ?>
           </p>
           <div class="paragraph">
-            <p>Trabajamos con el mejor equipamiento y tecnología del mundo gracias a nuestra alianza con PBSC Urban Solutions, empresa líder en el ramo con más de 100 patentes individuales, presencia en 15 ciudades alrededor del mundo </p>
-            <p>como Londres y Nueva York, y ciudades mexicanas como Guadalajara y Toluca; más de 3,500 estaciones y 45,000 bicicletas alrededor del mundo.  </p>
+            <?php echo $page->txt2; ?>
+            <?php echo $page->txt3; ?>
           </div>
         </div>
       </div>
@@ -23,29 +22,29 @@
           <h2>Tecnología</h2>
           <div class="image-container">
            <div id="exp-station-1" class="message-for-station">
-              <h4>1.- Modulable</h4>
+              <h4>1.- <?php echo $page->title2; ?></h4>
               <hr class="right">
-              <p>1 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
+              <?php echo $page->txt4; ?>
             </div>
            <div id="exp-station-2" class="message-for-station display-hidden">
-              <h4>2.- Modulable</h4>
+              <h4>2.- <?php echo $page->title3; ?></h4>
               <hr class="right">
-              <p>2 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
+              <?php echo $page->txt5; ?>
             </div>
            <div id="exp-station-3" class="message-for-station display-hidden">
-              <h4>3.- Modulable</h4>
+              <h4>3.- <?php echo $page->title4; ?></h4>
               <hr class="right">
-              <p>3 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
+              <?php echo $page->txt6; ?>
             </div>
            <div id="exp-station-4" class="message-for-station display-hidden">
-              <h4>4.- Modulable</h4>
+              <h4>4.- <?php echo $page->title5; ?></h4>
               <hr class="right">
-              <p>4 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
+              <?php echo $page->txt7; ?>
             </div>
            <div id="exp-station-5" class="message-for-station display-hidden">
-              <h4>5.- Modulable</h4>
+              <h4>5.- <?php echo $page->title5; ?></h4>
               <hr class="right">
-              <p>5 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
+              <?php echo $page->txt8; ?>
             </div>
             <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1495244812/images/estacion.png');"></div>
             <span class="explain-image-circle station-one"   onclick="toggleStationInfo(1)">1</span>
@@ -60,11 +59,7 @@
    <!--  BKT Mensaje Jumbo-->
    <section class="bkt-jumbo-message">
      <div class="j-wrap">
-       <p>
-         Un sistema de bicicletas públicas cambia las reglas <br>
-         de juego en la ciudad: donde es implementado, <br>
-         <strong>¡La gente lo adopta espatáneamente!</strong>
-       </p>
+         <?php echo $page->txt10; ?>
        <hr>
      </div>
    </section>
@@ -73,22 +68,23 @@
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-explain-image">
           <h2>La Bicicleta</h2>
-          <p class="j-content-50">Nuestra bicicleta se ha convertido en el ícono de los sistemas de bicicletas públicas en el mundo por su diseño, manejo y confiabilidad. Bicicleta robusta pero de fácil manejo durable y atractiva, fabricada aleaciones de aluminio y procesos de alta ingeniería. </p>
+          <p class="j-content-50">
+          <?php echo str_replace("<p>", "", $page->txt9); ?> </p>
           <div class="image-container">
             <div id="exp-bike-1" class="message-for-station">
-              <h4>1.- Manubrio</h4>
+              <h4>1.- <?php echo $page->title6; ?></h4>
               <hr class="right">
-              <p>1 De una sola pieza para protegertodos los componentes</p>
+              <?php echo $page->txt11; ?>
             </div>
             <div id="exp-bike-2" class="message-for-station display-hidden">
-              <h4>2.- Cuadro</h4>
+              <h4>2.- <?php echo $page->title7; ?></h4>
               <hr class="right">
-              <p>2 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Además permite modificar el tamaño de las estaciones según la demanda.</p>
+              <?php echo $page->txt12; ?>
             </div>
             <div id="exp-bike-3" class="message-for-station display-hidden">
-              <h4>3.- Llantas</h4>
+              <h4>3.- <?php echo $page->title8; ?></h4>
               <hr class="right">
-              <p>3 El sistema de montaje sobre placas modulables, permite instalar las estaciones sin necesidad de obra civil, de manera ágil y segura. Adeermite modificar el tamaño de las estaciones según la demanda.</p>
+              <?php echo $page->txt13; ?>
             </div>
             <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1495244812/images/bici-explicacion.png');"></div>
             <span class="explain-image-circle bike-one"   onclick="toggleBikeInfo(1)">1</span>
@@ -98,6 +94,19 @@
         </div>
       </div>
     </section>
+   <?php $image=$page->img1;?>
+   <section class="bkt-jumbo-message-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
+    <div class="blue-layer">
+      <div class="j-wrap">
+       <p>
+         <strong><?php echo $page->title9; ?></strong> <br>
+         <?php echo $page->txt14; ?>
+       </p>
+       <hr>
+     </div>
+    </div>
+   </section>
+  </main>
 <?php include('./_foot.php'); ?>
  <script>
     function toggleStationInfo(number){
@@ -113,9 +122,6 @@
       for (x = 1; x < 4; x++){
         $( "#exp-bike-" + x ).fadeOut();
       }
-//       $( "#exp-bike-" + number ).removeClass('hidden');
        $( "#exp-bike-" + number ).fadeIn();
-      
-      
     }
-  </script>
+</script>
