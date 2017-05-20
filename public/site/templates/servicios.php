@@ -9,8 +9,8 @@
             <?php echo str_replace("<p>", "", $page->txt1); ?>
           </p>
           <div class="paragraph">
-            <p><?php echo $page->txt2; ?></p>
-            <p><?php echo $page->txt3; ?></p>
+            <?php echo $page->txt2; ?>
+            <?php echo $page->txt3; ?>
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-text fifthy-percent">
           <h2 class="j-color-inverse"><?php echo $page->title2; ?></h2>
-          <?php echo str_replace('<li>', '<li class="j-color-inverse"', $page->txt6); ?>
+          <?php echo str_replace('<li>', '<li class="j-color-inverse">', $page->txt6); ?>
         </div>
         <?php $image=$page->img2;
         if($image)
