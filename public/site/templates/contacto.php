@@ -40,10 +40,13 @@
    <section class="bkt-jumbo-message-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
      <div class="blue-layer">
        <div class="j-wrap">
+       <p>
           <strong><?php echo $page->title1; ?></strong> <br>
           <?php echo $page->txt2; ?>
+        </p>
         <hr>
       </div>
+
      </div>
     </section>
   </main>

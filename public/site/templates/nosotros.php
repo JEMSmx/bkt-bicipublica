@@ -4,10 +4,10 @@
    <section class="bkt-features for-titles j-bg-gray-lighter">
       <div class="bkt-features-wrap for-titles">
         <div class="bkt-features-wrap-middle-down-title">
-          <h1>Nosotros</h1>
+          <h1><?php echo $page->title; ?></h1>
           <div class="paragraph">
-            <p>BKT bici pública profesionaliza su pasión por la promoción del ciclismo urbano a partir del año 2006.  Con el diseño industrial como origen, comenzamos diseñando elementos urbanos y racks para bicicleta, creando una red (link a experiencia/bikla) en la ciudad de Guadalajara que al poco tiempo se transformaría un </p>
-            <p>nuestra primer experiencia con los sistemas de bicicletas públicas. Nuestra misión es hacer que cada día más gente pueda moverse en bicicleta en la ciudad, y para lograrlo, ofrecemos soluciones llenas de creatividad, innovación y desarrollo, experiencia y flexibilidad.</p>
+            <?php echo $page->txt1; ?>
+            <?php echo $page->txt2; ?>
           </div>
         </div>
       </div>
