@@ -34,7 +34,8 @@
       </div>
     </section>
     <!--  BKT Fortalezas = Bikla about-->
-    <section class="bkt-features j-bg-color-warning">
+     <?php $image=$page->img6;?>
+   <section class="bkt-features j-bg-color-warning <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-text fifthy-percent">
           <?php echo $page->txt7; ?>
@@ -85,7 +86,10 @@
         </div>
         <div class="bkt-features-wrap-text fifthy-percent">
           <h2><?php echo $page->title4; ?></h2>
-          <?php echo $page->title5; ?>
+          <br>
+           <span class="title-lighter">
+            <?php echo $page->title5; ?>
+          </span>
           <hr class="right">
           <?php echo $page->txt11; ?>
         </div>
@@ -137,7 +141,10 @@
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-text fifthy-percent">
           <h2><?php echo $page->title8; ?></h2>
-          <?php echo $page->title9; ?>
+          <br>
+          <span class="title-lighter">
+            <?php echo $page->title9; ?>
+          </span>
           <hr class="right">
           <?php echo $page->txt14; ?>
         </div>
