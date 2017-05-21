@@ -16,26 +16,23 @@
     <section class="bkt-features j-bg-color-inverse">
       <div class="bkt-features-wrap bkt-aliance">
         <div class="bkt-aliance-title">
-         <h2>Alianzas</h2>
+        <?php $page_ali=$pages->get("template=Alianza"); ?>
+         <h2><?php echo $page_ali->title; ?></h2>
           <p class="j-color-secondary">
-           Contamos con las alianzas que nos permiten ser la empresa más sólida en México, con mayor experiencia y mejores prácticas. 
+           <?php echo str_replace("<p>", "", $page_ali->summary); ?>
           </p>
         </div>
         <div class="bkt-aliance-body grid">
+        <?php $alianzas=$pages->find("template=Alianza");
+      foreach($alianzas as $alianza){ ?> 
           <div class="unit one-third">
-            <img src="" alt="">
-            <h3>PBSC</h3>
+            <img src="<?php echo $alianza->img1->url; ?>" alt="<?php echo $alianza->title; ?>">
+            <h3><?php echo $alianza->title; ?></h3>
             <hr class="right">
-            <p>Empresa líder en suministro de sistema de bicicletas públicas. Sus productos han sido desde su fundación ícono de innovación, y una solución inmejorable en el mercado actual. Con presencia en más de 17 ciudades alrededor del mundo como: Londres, Chicago, NY y Guadalajara.</p>
-            <a class="bkt-btn" href="">Ir al sitio web</a>
+            <?php echo $alianza->txt1; ?>
+            <a class="bkt-btn" href=" <?php echo $alianza->url1; ?>">Ir al sitio web</a>
           </div>
-          <div class="unit one-third">
-            <img src="" alt="">
-            <h3>CUADRA Ubanismo</h3>
-            <hr class="right">
-            <p>Despacho de urbanismo especializado en el diseño y aplicación de metodologías para la socialización de proyectos, diseño urbano - movilidad y ciudad.</p>
-            <a class="bkt-btn" href="">Ir al sitio web</a>
-          </div>
+        <?php } ?>
         </div>
       </div>
     </section>
@@ -51,40 +48,22 @@
     <section class="bkt-features j-bg-color-inverse bkt-team">
       <div class="bkt-features-wrap bkt-aliance">
         <div class="bkt-aliance-title">
-         <h2>Alianzas</h2>
+        <?php $page_team=$pages->get("template=Equipo"); ?>
+         <h2><?php echo $page_team->title; ?></h2>
           <p class="j-color-secondary">
-           Contamos con las alianzas que nos permiten ser la empresa más sólida en México, con mayor experiencia y mejores prácticas. 
+           <?php echo str_replace("<p>", "", $page_ali->summary); ?>
           </p>
         </div>
         <div class="bkt-aliance-body grid">
-          <!--  Integrante numero uno  -->
+        <?php $equipo=$pages->find("template=Integrante");
+          foreach($equipo as $integrante){ ?> 
           <div class="unit one-third">
-            <img src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/mario.png" alt="Mario Delgado Padilla">
-            <h3>Mario Delgado Padilla</h3>
+            <img src="<?php echo $integrante->img1->url; ?>" alt="<?php echo $integrante->title; ?>">
+            <h3><?php echo $integrante->title; ?></h3>
             <hr class="right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos accusantium sed optio debitis quisquam iure repellendus quo facilis molestiae quae porro eius possimus, culpa a dolores error praesentium voluptatibus voluptates.</p>
+            <?php echo $integrante->txt1; ?>
           </div>
-          <!--  Integrante numero uno  -->
-          <div class="unit one-third">
-            <img src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/mario.png" alt="Mario Delgado Padilla">
-            <h3>Mario Delgado Padilla</h3>
-            <hr class="right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos accusantium sed optio debitis quisquam iure repellendus quo facilis molestiae quae porro eius possimus, culpa a dolores error praesentium voluptatibus voluptates.</p>
-          </div>
-          <!--  Integrante numero uno  -->
-          <div class="unit one-third">
-            <img src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/mario.png" alt="Mario Delgado Padilla">
-            <h3>Mario Delgado Padilla</h3>
-            <hr class="right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos accusantium sed optio debitis quisquam iure repellendus quo facilis molestiae quae porro eius possimus, culpa a dolores error praesentium voluptatibus voluptates.</p>
-          </div>
-          <!--  Integrante numero uno  -->
-          <div class="unit one-third">
-            <img src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/mario.png" alt="Mario Delgado Padilla">
-            <h3>Mario Delgado Padilla</h3>
-            <hr class="right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos accusantium sed optio debitis quisquam iure repellendus quo facilis molestiae quae porro eius possimus, culpa a dolores error praesentium voluptatibus voluptates.</p>
-          </div>
+        <?php } ?>   
         </div>
       </div>
     </section>
