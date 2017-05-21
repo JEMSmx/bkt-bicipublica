@@ -35,8 +35,5 @@ deploy:
     skip_cleanup: true
     on:
       branch: beta
-  # - provider: script
-  #   script: ./git-ftp push -s $TRAVIS_BRANCH -v -f
-  #   skip_cleanup: true
-  #   on:
-  #     branch: beta
+after_deploy:
+  - './cleanup.py "${!GIT_FTP_URL_BRANCH}"'
