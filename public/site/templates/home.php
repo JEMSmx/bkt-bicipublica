@@ -50,7 +50,7 @@
        <div class="bkt-features-wrap-text">
          <h2><?php echo $page->title1; ?></h2>
          <p><?php echo $page->txt2; ?></p>
-        <?php if($check1){ ?>
+        <?php if($page->check1){ ?>
          <a class="bkt-btn" href="<?php echo $page->url1; ?>"><?php echo $page->title6; ?></a>
         <?php } ?>
        </div>
