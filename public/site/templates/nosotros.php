@@ -16,17 +16,19 @@
     <section class="bkt-features j-bg-color-inverse">
       <div class="bkt-features-wrap bkt-aliance">
         <div class="bkt-aliance-title">
-        <?php $page_ali=$pages->get("template=Alianza"); ?>
+        <?php $page_ali=$pages->get("template=Alianzas"); ?>
          <h2><?php echo $page_ali->title; ?></h2>
           <p class="j-color-secondary">
-           <?php echo str_replace("<p>", "", $page_ali->summary); ?>
+           <?php echo $page_ali->summary; ?>
           </p>
         </div>
         <div class="bkt-aliance-body grid">
         <?php $alianzas=$pages->find("template=Alianza");
       foreach($alianzas as $alianza){ ?> 
           <div class="unit one-third">
+          <?php if($alianza->img1){ ?> 
             <img src="<?php echo $alianza->img1->url; ?>" alt="<?php echo $alianza->title; ?>">
+          <?php } ?>
             <h3><?php echo $alianza->title; ?></h3>
             <hr class="right">
             <?php echo $alianza->txt1; ?>
@@ -51,14 +53,16 @@
         <?php $page_team=$pages->get("template=Equipo"); ?>
          <h2><?php echo $page_team->title; ?></h2>
           <p class="j-color-secondary">
-           <?php echo str_replace("<p>", "", $page_ali->summary); ?>
+           <?php echo $page_team->summary; ?>
           </p>
         </div>
         <div class="bkt-aliance-body grid">
         <?php $equipo=$pages->find("template=Integrante");
           foreach($equipo as $integrante){ ?> 
           <div class="unit one-third">
+          <?php if($integrante->img1){ ?> 
             <img src="<?php echo $integrante->img1->url; ?>" alt="<?php echo $integrante->title; ?>">
+          <?php } ?>
             <h3><?php echo $integrante->title; ?></h3>
             <hr class="right">
             <?php echo $integrante->txt1; ?>
