@@ -6,7 +6,7 @@
         <div class="bkt-features-wrap-middle-down-title">
           <h1><?php echo $page->title; ?></h1>
           <p class="sub-title">
-            <?php echo str_replace("<p></p>", "", $page->txt1); ?>
+            <?php echo str_replace("<p>", "", $page->txt1); ?>
           </p>
           <div class="paragraph">
             <?php echo $page->txt2; ?>
