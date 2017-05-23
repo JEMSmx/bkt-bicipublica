@@ -124,7 +124,7 @@
    </section>
   </main>
 <?php include('./_foot.php'); ?>
- <script>
+  <script>
     function toggleStationInfo(number){
       var x=0;
       for (x = 1; x < 6; x++){
@@ -135,9 +135,9 @@
     }
     function toggleBikeInfo(number){
       var x=0;
-      for (x = 1; x < 4; x++){
+      for (x = 1; x < 10; x++){
         $( "#exp-bike-" + x ).fadeOut();
       }
        $( "#exp-bike-" + number ).fadeIn();
     }
-</script>
+  </script>
