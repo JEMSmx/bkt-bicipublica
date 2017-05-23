@@ -20,7 +20,7 @@
             <?php echo $page->title2; ?>
           <h3>Teléfono</h3>
           <p>
-            <a href="tel:<?php echo $page->title3; ?>"><?php echo $page->title3; ?></a>
+            <a href="tel:<?php echo intval(preg_replace('/[^0-9]+/', '', $cadena), 10); ?>"><?php echo $page->title3; ?></a>
           </p>
           <h3>Correo electronico</h3>
           <p>
