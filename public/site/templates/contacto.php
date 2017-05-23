@@ -37,8 +37,7 @@
     <!--  BKT Mensaje Jumbo-->
     <!--  For the correct re-use of the element is nesesary the inline image  -->
     <?php $image=$page->img2;?>
-   <section class="bkt-jumbo-message-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
-     <div class="blue-layer">
+   <section class="bkt-jumbo-message-blue multiply-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
        <div class="j-wrap">
        <p>
           <strong><?php echo $page->title1; ?></strong> <br>
@@ -46,8 +45,6 @@
         </p>
         <hr>
       </div>
-
-     </div>
     </section>
   </main>
 <?php include('./_foot.php'); ?>
@@ -63,7 +60,7 @@
               zoom: 11,
 
               // The latitude and longitude to center the map (always required)
-              center: new google.maps.LatLng(20.672773,-103.365779),
+              center: new google.maps.LatLng(20.670622,-103.3545505),
               zoom: 16,// New York
             
 
@@ -80,21 +77,21 @@
           var map = new google.maps.Map(mapElement, mapOptions);
           // Let's also add a marker while we're at it
           var image = {
-            url:'<?php echo $config->urls->templates; ?>static/455375-1485995688/images/location-bkt-bicipublica.png',
+            url:'<?php echo $config->urls->templates; ?>static/455375-1495344734/images/location-bkt-bicipublica.png',
           };
           var contentString = '<div id="content">'+
               '<div id="siteNotice">'+
               '</div>'+
               '<h2>BKT Bicipública</h2>'+
               '<div id="bodyContent">'+
-              '<p>Ubicado en Vía Libertad en el piso numero 12. <br> Atención a clientes con previa cita. <br><a target="_blank" href="https://www.google.com.mx/maps/dir//V%C3%8DA+LIBERTAD,+Calle+Colonias+221,+Americana,+44160+Guadalajara,+Jal./@20.672773,-103.365779,15z/data=!4m15!1m6!3m5!1s0x0:0xf1641c200c61ae6d!2sV%C3%8DA+LIBERTAD!8m2!3d20.672773!4d-103.365779!4m7!1m0!1m5!1m1!1s0x8428ae045fce0dd5:0xf1641c200c61ae6d!2m2!1d-103.365779!2d20.672773">Como llegar</a></p>'+
+              '<p>Ubicado en Av Federalismo 403 entre Av. La Paz y Libertad. <br> Atención a clientes con previa cita. <br><a target="_blank" href="https://www.google.com.mx/maps/place/MIBICI+Guadalajara/@20.670622,-103.3545505,15z/data=!4m5!3m4!1s0x0:0x34bb18a86a5aa163!8m2!3d20.670622!4d-103.3545505">Como llegar</a></p>'+
               '</div>'+
               '</div>';
         var infowindow = new google.maps.InfoWindow({
           content: contentString,
         });
         var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(20.672773,-103.365779),
+            position: new google.maps.LatLng(20.670622,-103.3545505),
             map: map,
             animation: google.maps.Animation.DROP,
             title: 'BKT Bici pública',

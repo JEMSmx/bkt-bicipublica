@@ -17,7 +17,7 @@
     </section>
     <!--  BKT Fortalezas = Bikla-->
     <?php $image=$page->img6;?>
-   <section class="bkt-features j-bg-gray-regular" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
+   <section class="bkt-features j-bg-gray-regular multiply-gray" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-middle-down-text">
          <h2><?php echo $page->title1; ?><sup>r</sup></h2>
@@ -82,7 +82,7 @@
         <?php $image=$page->img3;
         if($image)
           $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
-       <div class="bkt-features-wrap-photo desktop" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
+       <div class="bkt-features-wrap-photo desktop" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>;background-size: 75%;">
         </div>
         <div class="bkt-features-wrap-text fifthy-percent">
           <h2><?php echo $page->title4; ?>
@@ -98,7 +98,7 @@
         <?php $image=$page->img3;
         if($image)
           $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
-       <div class="bkt-features-wrap-photo mobile fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
+       <div class="bkt-features-wrap-photo mobile fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>;background-size: 75%;">
         </div>
       </div>
     </section>
@@ -116,7 +116,7 @@
         <?php $image=$page->img4;
         if($image)
           $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
-       <div class="bkt-features-wrap-photo desktop" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
+       <div class="bkt-features-wrap-photo desktop" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>;">
         </div>
         <div class="bkt-features-wrap-text fifthy-percent">
           <h2 class="j-color-inverse">
@@ -133,7 +133,7 @@
         <?php $image=$page->img4;
         if($image)
           $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
-       <div class="bkt-features-wrap-photo mobile fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
+       <div class="bkt-features-wrap-photo mobile fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>;">
         </div>
       </div>
     </section>
@@ -154,7 +154,7 @@
         <?php $image=$page->img5;
         if($image)
           $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
-       <div class="bkt-features-wrap-photo fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
+       <div class="bkt-features-wrap-photo fifthy-percent" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>;background-size: 75%;">
         </div>
       </div>
     </section>

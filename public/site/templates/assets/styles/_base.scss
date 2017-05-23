@@ -93,6 +93,14 @@ table {
   }
 }
 // Helper Classes
+.multiply-blue {
+  background-color: $color-secondary;
+  background-blend-mode: multiply;
+}
+.multiply-gray {
+  background-color: rgba($color-primary, .5);
+  background-blend-mode: multiply;
+}
 .j-img-absolute {
       display: block;
       position: absolute;

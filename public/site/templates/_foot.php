@@ -7,12 +7,12 @@
           <ul>
             <li>
               <a href="https://www.facebook.com/bktbp" target="_blank">
-                <img src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/icono-facebook.svg" alt="Síguenos en facebok">
+                <img src="<?php echo $config->urls->templates; ?>static/455375-1495344734/images/icono-facebook.svg" alt="Síguenos en facebok">
               </a>
             </li>
             <li>
               <a href="https://twitter.com/BKTbicipublica" target="_blank">
-                <img src="<?php echo $config->urls->templates; ?>static/455375-1485995688/images/icono-twitter.svg" alt="Síguenos en twitter">
+                <img src="<?php echo $config->urls->templates; ?>static/455375-1495344734/images/icono-twitter.svg" alt="Síguenos en twitter">
               </a>
             </li>
           </ul>
@@ -21,7 +21,7 @@
           <h3>Contacto</h3>
           <hr>
           <p>
-            <a href="tel:3338263655">(33) 3826 3655</a>
+            <a href="tel:3336136383">(33) 3613 6383</a>
             <br>
             <a href="mailto:info@bktbicipublica.com">info@bktbicipublica.com</a>
           </p>
@@ -30,8 +30,8 @@
           <h3>Ubicación</h3>
           <hr>
           <p>
-            Colonias 221 Piso 12, Col. Americana <br>
-            CP 44160, Guadalajara, México
+            Av. Federalismo 403 Col. Centro C.P 44100 <br>
+            Guadalajara, México.
           </p>
         </div>
       </div>

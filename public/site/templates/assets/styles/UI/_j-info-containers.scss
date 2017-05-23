@@ -1,24 +1,3 @@
-.slider {
-  background-color: white;
-  background-image: url(https://dummyimage.com/600x400/fff/333);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: calc(100% - 120px);
-  .j-color-layer{
-    background-color: rgba($color-secondary, .85);
-    height: 100%;
-    .j-wrap {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      h1 {
-        color: $color-inverse;
-      }
-    }
-  }
-}
 //Contenedor con las fortalezas de BKT 
 .bkt-strengths {
   .j-wrap {
@@ -30,21 +9,23 @@
   text-align: center;
   background-color: $color-secondary;
   .one-third {
+    padding: 0 32px;
     @media screen and (max-width: 768px){
       width: 100% !important;
     }
   }
   img {
     display: block;
-    height: 80px;
+    height: 65px;
     margin: auto;
+    margin-bottom: 16px;
   }
   h3{
-    color: $color-inverse;
+    color: $color-primary;
     text-transform: uppercase;
     display: inline-block;
     padding-bottom: 8px;
-    border-bottom: solid 3px;
+    border-bottom: solid 2px $color-inverse;
   }
   p {
     display: block;
@@ -75,35 +56,37 @@
   strong {
     font-weight: bold;
   }
+  hr {
+    margin-top: 32px;
+  }
 }
 .bkt-jumbo-message-blue {
   text-align: center;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  .blue-layer{
-    background-color: rgba($color-secondary, .85);
-     .j-wrap{
-       flex-direction: column;
-       padding: 96px 0;
-     }
-    p{
-      font-size: 32px;
-      color: white;
-      text-transform: uppercase;
-      margin: auto;
-      -webkit-transition: all 250ms ease-in-out;
-      transition: all 250ms ease-in-out;
-      @media screen and (max-width: 768px){
-        font-size:32px;
-      }
-    }
-    strong {
-      font-weight: bold;
+  .j-wrap{
+    flex-direction: column;
+    padding: 160px 0;
+  }
+  p{
+    font-size: 32px;
+    color: white;
+    text-transform: uppercase;
+    margin: auto;
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+    @media screen and (max-width: 768px){
+      font-size:32px;
     }
   }
+  strong {
+    font-weight: bold;
+  }
+  hr {
+    margin-top: 40px;
+  }
 }
-
 //Contenedores con presentacion de caraterísticas que definen a BKT
 //modificador para titulos en sub-paginas
 .bkt-features.for-titles-contact{
@@ -129,6 +112,7 @@
 .bkt-features{
   $min-height: 516px;
   min-height: $min-height;
+  background-size: cover;
   &-wrap{
     max-width: 1280px;
     min-height: $min-height;
@@ -392,8 +376,32 @@
         }
         //Bici punto 3
         .explain-image-circle.bike-three {
-          right: 20%;
-          top: 42%;
+          left: 45%;
+          top: 60%;
+          @media screen and (max-width: 768px){
+            top: calc(42% + #{$min-width-message});
+          }
+        }
+        //Bici punto 4
+        .explain-image-circle.bike-four {
+          left: 35%;
+          top: 60%;
+          @media screen and (max-width: 768px){
+            top: calc(10% + #{$min-width-message});
+          }
+        }
+        //Bici punto 5
+        .explain-image-circle.bike-five {
+          left: 39%;
+          top: 35%;
+          @media screen and (max-width: 768px){
+            top: calc(70% + #{$min-width-message});
+          }
+        }
+        //Bici punto 6
+        .explain-image-circle.bike-six {
+          right: 23%;
+          top: 20%;
           @media screen and (max-width: 768px){
             top: calc(42% + #{$min-width-message});
           }
@@ -439,6 +447,12 @@
     hr {
       border-color: $color-secondary;
     }
+    .one-third {
+      padding: 0 32px;
+      img {
+        max-height: 80px;
+      }
+    }
     a {
       margin-top: 16px;
     }
@@ -451,7 +465,7 @@
 .bkt-team {
   .bkt-aliance-body {
     img {
-      max-height: 250px;
+      max-height: 200px !important;
     }
   }
 }

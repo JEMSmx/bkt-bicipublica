@@ -210,15 +210,13 @@
    <!--  BKT Mensaje Jumbo-->
    <!--  For the correct re-use of the element is nesesary the inline image  -->
     <?php $image=$page->img7;?>
-   <section class="bkt-jumbo-message-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
-     <div class="blue-layer">
-       <div class="j-wrap">
+   <section class="bkt-jumbo-message-blue multiply-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
+     <div class="j-wrap">
         <p>
           <strong><?php echo $page->title5; ?></strong> <br>
           <?php echo $page->txt12; ?>
         </p>
         <hr>
-      </div>
      </div>
     </section>
   </main>

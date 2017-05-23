@@ -6,7 +6,7 @@
         <div class="bkt-features-wrap-middle-down-title">
           <h1><?php echo $page->title; ?></h1>
           <p class="sub-title">
-            <?php echo str_replace("<p>", "", $page->txt1); ?>
+            <?php echo str_replace("<p></p>", "", $page->txt1); ?>
           </p>
           <div class="paragraph">
             <?php echo $page->txt2; ?>
@@ -46,7 +46,7 @@
               <hr class="right">
               <?php echo $page->txt8; ?>
             </div>
-            <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1495244812/images/estacion.png');"></div>
+            <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1495344734/images/estacion.png');"></div>
             <span class="explain-image-circle station-one"   onclick="toggleStationInfo(1)">1</span>
             <span class="explain-image-circle station-two"   onclick="toggleStationInfo(2)">2</span>
             <span class="explain-image-circle station-three" onclick="toggleStationInfo(3)">3</span>
@@ -86,17 +86,34 @@
               <hr class="right">
               <?php echo $page->txt13; ?>
             </div>
-            <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1495244812/images/bici-explicacion.png');"></div>
+            <div id="exp-bike-4" class="message-for-station display-hidden">
+              <h4>4.- <?php echo $page->title10; ?></h4>
+              <hr class="right">
+              <?php echo $page->txt15; ?>
+            </div>
+            <div id="exp-bike-5" class="message-for-station display-hidden">
+              <h4>5.- <?php echo $page->title11; ?></h4>
+              <hr class="right">
+              <?php echo $page->txt16; ?>
+            </div>
+            <div id="exp-bike-6" class="message-for-station display-hidden">
+              <h4>6.- <?php echo $page->title12; ?></h4>
+              <hr class="right">
+              <?php echo $page->txt17; ?>
+            </div>
+            <div class="image" style="background-image: url('<?php echo $config->urls->templates; ?>static/455375-1495344734/images/bici-explicacion.png');"></div>
             <span class="explain-image-circle bike-one"   onclick="toggleBikeInfo(1)">1</span>
             <span class="explain-image-circle bike-two"   onclick="toggleBikeInfo(2)">2</span>
             <span class="explain-image-circle bike-three" onclick="toggleBikeInfo(3)">3</span>
+            <span class="explain-image-circle bike-four"   onclick="toggleBikeInfo(4)">4</span>
+            <span class="explain-image-circle bike-five"   onclick="toggleBikeInfo(5)">5</span>
+            <span class="explain-image-circle bike-six" onclick="toggleBikeInfo(6)">6</span>
           </div>
         </div>
       </div>
     </section>
    <?php $image=$page->img1;?>
-   <section class="bkt-jumbo-message-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
-    <div class="blue-layer">
+   <section class="bkt-jumbo-message-blue multiply-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
       <div class="j-wrap">
        <p>
          <strong><?php echo $page->title9; ?></strong> <br>
@@ -104,7 +121,6 @@
        </p>
        <hr>
      </div>
-    </div>
    </section>
   </main>
 <?php include('./_foot.php'); ?>
