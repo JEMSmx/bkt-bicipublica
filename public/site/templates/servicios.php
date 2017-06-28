@@ -1,7 +1,7 @@
 <?php include('./_head.php'); ?>
   <main class="j-workspace">
    <!--  BKT Title-->
-   <section class="bkt-features for-titles j-bg-gray-lighter">
+   <section class="bkt-features for-titles j-bg-gray-ghost">
       <div class="bkt-features-wrap for-titles">
         <div class="bkt-features-wrap-middle-down-title">
           <h1><?php echo $page->title; ?></h1>

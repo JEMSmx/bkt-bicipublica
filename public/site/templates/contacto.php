@@ -1,9 +1,9 @@
 <?php include('./_head.php'); ?>
 <main class="j-workspace">
    <!--  BKT Title-->
-   <section class="bkt-features for-titles-contact j-bg-gray-lighter">
+   <section class="bkt-features for-titles-contact j-bg-gray-ghost">
       <div class="bkt-features-wrap for-titles-contact">
-        <div class="bkt-features-wrap-middle-down-title">
+        <div class="bkt-features-wrap-middle-down-title" style="width: 100%;">
           <h1><?php echo $page->title; ?></h1>
           <p class="sub-title">
              <?php echo str_replace("<p>", "", $page->txt1); ?>
@@ -12,7 +12,7 @@
       </div>
     </section>
     <!--  BKT Fortalezas = Bikla about-->
-    <section class="bkt-features j-bg-gray-ghost">
+    <section class="bkt-features j-bg-gray-lighter">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-text fifthy-percent">
           <h3>Dirección</h3>
@@ -39,7 +39,7 @@
     <?php $image=$page->img2;?>
    <section class="bkt-jumbo-message-blue multiply-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
        <div class="j-wrap">
-       <p>
+       <p data-aos="zoom-in">
           <strong><?php echo $page->title1; ?></strong> <br>
           <?php echo $page->txt2; ?>
         </p>

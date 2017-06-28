@@ -1,7 +1,7 @@
 <?php include('./_head.php'); ?>
  <main class="j-workspace">
    <!--  BKT Title-->
-   <section class="bkt-features for-titles j-bg-gray-lighter">
+   <section class="bkt-features for-titles j-bg-gray-ghost">
       <div class="bkt-features-wrap for-titles">
         <div class="bkt-features-wrap-middle-down-title">
           <h1><?php echo $page->title; ?></h1>
@@ -76,7 +76,7 @@
       </div>
     </section>
    <!--  BKT Fortalezas = MIBICI About-->
-   <section class="bkt-features j-bg-gray-lighter">
+   <section class="bkt-features j-bg-color-inverse">
       <div class="bkt-features-wrap ">
         <!--  The next container show a photo in desktop and hidden in mobile for esthetic reason  -->
         <?php $image=$page->img3;
@@ -102,13 +102,14 @@
         </div>
       </div>
     </section>
-   <!--  BKT Mensaje Jumbo-->
+   <!--  BKT Mensaje Jumbo
    <section class="bkt-jumbo-message">
      <div class="j-wrap">
         <?php echo $page->txt12; ?>
        <hr>
      </div>
    </section>
+   -->
    <!--  BKT Fortalezas = Software Propio  -->
    <section class="bkt-features j-bg-gray-dark">
       <div class="bkt-features-wrap ">

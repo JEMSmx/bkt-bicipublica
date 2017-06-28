@@ -5,7 +5,7 @@
           $img_thumb= $image->height(800, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
   <div class="j-workspace slider multiply-blue" <?php if($image) { ?> style="background-image: url('<?php echo $img_thumb->url; ?>'); <?php } ?>">
     <div class="j-wrap">
-      <h1><?php echo strip_tags($page->headline, "<br>"); ?></h1>
+      <h1 data-aos="zoom-in"><?php echo strip_tags($page->headline, "<br>"); ?></h1>
     </div>
   </div>
   <main class="j-workspace">
@@ -13,24 +13,24 @@
    <section class="bkt-strengths">
      <div class="j-wrap grid">
       <div class="unit one-third">
-        <img src="<?php echo $config->urls->templates; ?>static/455375-1495344734/images/icono-diseño.svg" alt="Icono diseño fortalezas BKT bici pública">
-        <h3>Diseño</h3>
-        <p>
-          Diagnóstico de la ciudad y definicón de polígonos de intervención, diseño de la red, dimensión y capacidad de estaciones dentro de un mapa.
+        <img data-aos="zoom-in" src="<?php echo $config->urls->templates; ?>static/455375-1495563394/images/icono-diseño.svg" alt="Icono diseño fortalezas BKT bici pública">
+        <h3 data-aos="zoom-in">Diseño</h3>
+        <p data-aos="zoom-in">
+          Diagnósticos, definición de polígonos, diseño de la red, dimensión y capacidad de estaciones.
         </p>
       </div>
       <div class="unit one-third">
-        <img src="<?php echo $config->urls->templates; ?>static/455375-1495344734/images/icono-implementacion.svg" alt="Icono implementación fortalezas BKT bici pública">
-        <h3>Implementación</h3>
-        <p>
-          Diagnóstico de la ciudad y definicón de polígonos de intervención, diseño de la red, dimensión y capacidad de estaciones dentro de un mapa.
+        <img data-aos="zoom-in" src="<?php echo $config->urls->templates; ?>static/455375-1495563394/images/icono-implementacion.svg" alt="Icono implementación fortalezas BKT bici pública">
+        <h3 data-aos="zoom-in">Implementación</h3>
+        <p data-aos="zoom-in">
+          Integración de tecnologías, instalación de estaciones, puesta a punto. Gestión social e institucional. Comunicación. 
         </p>
       </div>
       <div class="unit one-third">
-        <img src="<?php echo $config->urls->templates; ?>static/455375-1495344734/images/icono-operacion.svg" alt="Icono operación fortalezas BKT bici pública">
-        <h3>Operación</h3>
-        <p>
-          Diagnóstico de la ciudad y definicón de polígonos de intervención, diseño de la red, dimensión y capacidad de estaciones dentro de un mapa.
+        <img data-aos="zoom-in" src="<?php echo $config->urls->templates; ?>static/455375-1495563394/images/icono-operacion.svg" alt="Icono operación fortalezas BKT bici pública">
+        <h3 data-aos="zoom-in">Operación</h3>
+        <p data-aos="zoom-in">
+          Comprender las dinámicas de la ciudad, ofrecer disponibilidad, mantenimiento. Excelencia en el servicio al usuario.
         </p>
       </div>
     </div>
@@ -119,7 +119,7 @@
    <?php $image=$page->img5;?>
    <section class="bkt-jumbo-message-blue multiply-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
       <div class="j-wrap">
-        <p>
+        <p data-aos="zoom-in">
           <strong><?php echo $page->title5; ?></strong> <br>
           <?php echo $page->txt8; ?>
         </p>

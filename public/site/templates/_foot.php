@@ -64,5 +64,13 @@
     document.getElementById("close-icon").addEventListener('click', toggleHeaderResponsive);
     
   </script>
+  <script>
+    AOS.init({
+      offset: 200,
+      duration: 400,
+      easing: 'ease-in',
+      delay: 100,
+    });
+  </script>
 </body>
 </html>
