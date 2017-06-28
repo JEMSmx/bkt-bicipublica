@@ -1,0 +1,17 @@
+.slider {
+  background-image: url(https://dummyimage.com/600x400/fff/333);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: calc(100% - 120px);
+  .j-wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    h1 {
+      text-transform: none;
+      color: $color-inverse;
+    }
+  }
+}

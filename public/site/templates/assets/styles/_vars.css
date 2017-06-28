@@ -1,0 +1,131 @@
+/* line 4, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-color-primary {
+  color: #414042; }
+
+/* line 4, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-bg-color-primary {
+  background-color: #414042; }
+
+/* line 5, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-color-secondary {
+  color: #23a0cc; }
+
+/* line 5, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-bg-color-secondary {
+  background-color: #23a0cc; }
+
+/* line 6, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-color-inverse {
+  color: #FFF; }
+
+/* line 6, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-bg-color-inverse {
+  background-color: #FFF; }
+
+/* line 7, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-color-success {
+  color: #BFF07A; }
+
+/* line 7, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-bg-color-success {
+  background-color: #BFF07A; }
+
+/* line 8, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-color-info {
+  color: #594A62; }
+
+/* line 8, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-bg-color-info {
+  background-color: #594A62; }
+
+/* line 9, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-color-warning {
+  color: #fff200; }
+
+/* line 9, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-bg-color-warning {
+  background-color: #fff200; }
+
+/* line 10, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-color-danger {
+  color: #D17481; }
+
+/* line 10, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-bg-color-danger {
+  background-color: #D17481; }
+
+/* line 13, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-gray-base {
+  color: black; }
+
+/* line 13, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-bg-gray-base {
+  background-color: black; }
+
+/* line 14, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-gray-darker {
+  color: #262626; }
+
+/* line 14, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-bg-gray-darker {
+  background-color: #262626; }
+
+/* line 15, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-gray-dark {
+  color: #595959; }
+
+/* line 15, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-bg-gray-dark {
+  background-color: #595959; }
+
+/* line 16, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-gray-regular {
+  color: gray; }
+
+/* line 16, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-bg-gray-regular {
+  background-color: gray; }
+
+/* line 17, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-gray-light {
+  color: #a6a6a6; }
+
+/* line 17, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-bg-gray-light {
+  background-color: #a6a6a6; }
+
+/* line 18, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-gray-lighter {
+  color: #d9d9d9; }
+
+/* line 18, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-bg-gray-lighter {
+  background-color: #d9d9d9; }
+
+/* line 19, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-gray-ghost {
+  color: #e6e6e6; }
+
+/* line 19, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.j-bg-gray-ghost {
+  background-color: #e6e6e6; }
+
+/* line 27, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.k-vs-50p {
+  margin-bottom: 50px; }
+
+/* line 28, /Users/ErickLeos/Downloads/BKT-Bicipublica/assets/styles/_vars.scss */
+.k-vs-25p {
+  margin-bottom: 25px; }
+
+@font-face {
+  font-family: 'BrixSans', sans-serif;
+  src: url("fonts/Light.ttf") format("truetype");
+  font-weight: regular; }
+
+@font-face {
+  font-family: 'BrixSans', sans-serif;
+  src: url("fonts/Bold.ttf") format("truetype");
+  font-weight: bold; }
+
+/*# sourceMappingURL=_vars.css.map */

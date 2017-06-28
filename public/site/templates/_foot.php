@@ -1,95 +1,76 @@
-
-  <!-- Footer -->
-  <footer class="k-footer">
-    <div class="wrap wider grid">
-
-      <div class="k-sitemap unit half">
-        <div class="k-container">
-          <h5 class="k-heading">Header H5</h5>
+<footer class="j-workspace">
+    <div class="j-wrap">
+      <div class="contact-ways">
+        <div class="footer-unit social-networks">
+          <h3>Redes sociales</h3>
+          <hr>
           <ul>
-            <li><a href="#">Link one</a></li>
-            <li><a href="#">Link two</a></li>
-            <li><a href="#">Link 🌲</a></li>
+            <li>
+              <a href="https://www.facebook.com/bktbp" target="_blank">
+                <img src="<?php echo $config->urls->templates; ?>static/455375-1495344734/images/icono-facebook.svg" alt="Síguenos en facebok">
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/BKTbicipublica" target="_blank">
+                <img src="<?php echo $config->urls->templates; ?>static/455375-1495344734/images/icono-twitter.svg" alt="Síguenos en twitter">
+              </a>
+            </li>
           </ul>
         </div>
-
-        <div class="k-container">
-          <h5 class="k-heading">Header H5</h5>
-          <ul>
-            <li><a href="#">Link one</a></li>
-            <li><a href="#">Link two</a></li>
-            <li><a href="#">Link three</a></li>
-            <li><a href="#">Link four</a></li>
-          </ul>
+        <div class="footer-unit footer-contact">
+          <h3>Contacto</h3>
+          <hr>
+          <p>
+            <a href="tel:3336136383">(33) 3613 6383</a>
+            <br>
+            <a href="mailto:info@bktbicipublica.com">info@bktbicipublica.com</a>
+          </p>
         </div>
-
-        <div class="k-container">
-          <h5 class="k-heading">Header H5</h5>
-
-          <?php k::render_nav_tree($pages->get('/')->children, 0); ?>
-
-          <ul>
-            <li><a href="#">Link one</a></li>
-            <li><a href="#">Link two</a></li>
-          </ul>
+        <div class="footer-unit location">
+          <h3>Ubicación</h3>
+          <hr>
+          <p>
+            Av. Federalismo 403 Col. Centro C.P 44100 <br>
+            Guadalajara, México.
+          </p>
         </div>
       </div>
-
-      <div class="k-address unit half">
-        <address>
-          <h5 class="k-heading">Contact us H5</h5>
-          <small><a href="tel:+18006732679"><strong>T.</strong> (800) 673-2679</a></small>
-          <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-behance-square" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        </address>
+      <div class="footer-bottom">
+        <svg version="1.0" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 80.6 44.5" style="enable-background:new 0 0 80.6 44.5;" xml:space="preserve">
+          <g>
+            <path class="st0" d="M52.2,9.2c1.9-1.9,3.9-1.9,4.5-1.9h9c-1.2,1.6-2.6,3.5-2.6,3.5h4.4l3.8-5.4L67.5,0h-4.4c0,0,1.5,2,2.7,3.6
+              h-9.1c-3,0-5.2,1-7.2,3L30.5,26.2c-0.5,0.5-1.1,0.9-1.7,1.2c-1.2-6.8-7.1-11.9-14.3-11.9C6.5,15.5,0,22,0,30
+              c0,8,6.5,14.5,14.5,14.5c7.5,0,13.7-5.7,14.4-13.1c1.6-0.5,3-1.3,4.2-2.5L52.2,9.2z M14.5,40.6C8.6,40.6,3.8,35.9,3.8,30
+              s4.8-10.6,10.6-10.6c5.2,0,9.6,3.8,10.5,8.7l-12.8,0l2.7,3.8H25C24.1,36.8,19.7,40.6,14.5,40.6z"/>
+            <path class="st0" d="M30.5,9.2l5.6,5.7l2.6-2.6l-5.6-5.7c-1.9-1.9-4.4-3-7.2-3H14.9l-2.7,3.7l13.8,0C27.6,7.4,29.3,8,30.5,9.2z"/>
+            <path class="st0" d="M66.1,15.5c-6.6,0-12.3,4.5-14,10.6l-5.4-5.5l-2.6,2.6l5.5,5.6c0.6,0.6,1.3,1.2,2,1.6c0.2,7.8,6.6,14,14.5,14
+              c8,0,14.5-6.5,14.5-14.5C80.6,22,74.1,15.5,66.1,15.5z M66.1,40.6c-5.3,0-9.6-3.8-10.5-8.9c0.4,0,0.8,0.1,1.2,0.1h9.1
+              c-1.2,1.7-2.7,3.6-2.7,3.6h4.4l3.8-5.4l-3.8-5.4h-4.4c0,0,1.4,1.9,2.6,3.5h-9c-0.2,0-0.6,0-1.1-0.1c0.9-4.9,5.3-8.7,10.5-8.7
+              c5.9,0,10.6,4.8,10.6,10.6S72,40.6,66.1,40.6z"/>
+          </g>
+        </svg>
+                <p>® BKT pici pública Todos los derechos reservados.</p>
       </div>
-
-      <div class="k-details">
-        <small>&copy; 2016</small>
-
-        <ul>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Terms</a></li>
-          <li><?php
-            if ($user->isLoggedin()) {
-              echo "<a href='{$config->urls->admin}login/logout/'>Logout ($user->name)</a>";
-            } else {
-              echo "<a href='{$config->urls->admin}'>Admin Login</a>";
-            }
-          ?></li>
-          <li><button onclick="$('.unit, .unit div').css('background-color','rgba(120,210,210,.5)');"><small>Debug</small></button></li>
-        </ul>
-      </div>
-
     </div>
   </footer>
-
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NBVG29"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NBVG29');</script>
-<!-- End Google Tag Manager -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
-<script src="<?php echo $config->urls->templates; ?>static/455375-147357/scripts/main.min.js"></script>
-
-<svg style="display: none;">
-  <symbol id="k-svg-icon-drawer" viewBox="0 0 50 72">
-    <path d="M44 23H6c-1.657 0-3-1.343-3-3s1.343-3 3-3h38c1.657 0 3 1.343 3 3s-1.343 3-3 3zM44 39.007H6c-1.657 0-3-1.343-3-3s1.343-3 3-3h38c1.657 0 3 1.343 3 3s-1.343 3-3 3zM44 55H6c-1.657 0-3-1.343-3-3s1.343-3 3-3h38c1.657 0 3 1.343 3 3s-1.343 3-3 3z" />
-  </symbol>
-
-  <symbol id="k-svg-icon-close" viewBox="0 0 46 72">
-    <path d="M27.243 36l14.88-14.88c1.17-1.17 1.17-3.07 0-4.24-1.172-1.173-3.072-1.173-4.243 0L23 31.757 8.122 16.878c-1.17-1.17-3.07-1.17-4.242 0-1.172 1.172-1.172 3.072 0 4.243L18.758 36 3.878 50.88c-1.17 1.17-1.17 3.07 0 4.24.587.587 1.355.88 2.123.88s1.536-.293 2.122-.88L23 40.243l14.88 14.88c.585.585 1.353.878 2.12.878.768 0 1.535-.293 2.12-.88 1.173-1.17 1.173-3.07 0-4.24L27.244 36z" />
-  </symbol>
-</svg>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    function toggleHeaderResponsive() {
+      $('header').toggleClass("mobile-active")
+    }
+    document.getElementById("menu-icon").addEventListener('click', toggleHeaderResponsive);
+    document.getElementById("close-icon").addEventListener('click', toggleHeaderResponsive);
+    
+  </script>
+  <script>
+    AOS.init({
+      offset: 200,
+      duration: 400,
+      easing: 'ease-in',
+      delay: 100,
+    });
+  </script>
 </body>
 </html>
