@@ -214,7 +214,7 @@
      <div class="j-wrap">
         <p>
           <strong><?php echo $page->title5; ?></strong> <br>
-          <?php echo $page->txt12; ?>
+          <?php echo strip_tags($page->txt12, "<br>"); ?>
         </p>
         <hr>
      </div>

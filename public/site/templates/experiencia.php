@@ -20,7 +20,7 @@
    <section class="bkt-features j-bg-gray-regular multiply-gray" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-middle-down-text">
-         <h2><?php echo $page->title1; ?><sup>r</sup></h2>
+         <h2><?php echo $page->title1; ?></h2>
          <div class="text">
            <div class="subtitle-container">
              <p class="sub-title">

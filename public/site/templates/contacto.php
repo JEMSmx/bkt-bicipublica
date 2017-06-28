@@ -41,7 +41,7 @@
        <div class="j-wrap">
        <p data-aos="zoom-in">
           <strong><?php echo $page->title1; ?></strong> <br>
-          <?php echo $page->txt2; ?>
+          <?php echo strip_tags($page->txt2, "<br>"); ?>
         </p>
         <hr>
       </div>

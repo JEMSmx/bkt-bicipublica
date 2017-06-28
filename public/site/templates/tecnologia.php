@@ -117,7 +117,7 @@
       <div class="j-wrap">
        <p data-aos="zoom-in">
          <strong><?php echo $page->title9; ?></strong> <br>
-         <?php echo $page->txt14; ?>
+         <?php echo strip_tags($page->txt14, "<br>"); ?>
        </p>
        <hr>
      </div>
