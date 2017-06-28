@@ -44,8 +44,7 @@
     </section>
   </main>
 <?php include('./_foot.php'); ?>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVCrIxLv8FKnOzYQr22SdYuaBcVkqn6Xs"
-  type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVCrIxLv8FKnOzYQr22SdYuaBcVkqn6Xs" type="text/javascript"></script>
  <script type="text/javascript">
       google.maps.event.addDomListener(window, 'load', init);
       function init() {
