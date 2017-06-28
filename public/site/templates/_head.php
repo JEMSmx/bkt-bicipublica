@@ -25,7 +25,7 @@
  <!--  BKT Header-->
   <header id="header1">
     <a href="/"><img src="<?php echo $config->urls->templates; ?>static/455375-1495563394/images/bkt-logotipo.svg" alt="Logotipo BKT bici pública"></a>
-    <a id="close-icon" href=""><img src="<?php echo $config->urls->templates; ?>static/455375-1495563394/images/close-icon.svg"></a>
+    <a id="close-icon" href="javascript:void(0);"><img src="<?php echo $config->urls->templates; ?>static/455375-1495563394/images/close-icon.svg"></a>
     <nav>
       <ul>
         <a href="" title="Inicio">
