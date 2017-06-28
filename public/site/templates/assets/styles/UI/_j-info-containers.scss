@@ -1,4 +1,4 @@
-//Contenedor con las fortalezas de BKT 
+//Contenedor con las fortalezas de BKT
 .bkt-strengths {
   .j-wrap {
     @media screen and (max-width: 768px){
@@ -45,7 +45,7 @@
     flex-direction: column;
   }
   p{
-    font-size: 40px;
+    font-size: 32px;
     margin: auto;
     -webkit-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
@@ -266,7 +266,7 @@
             padding: 0;
           }
         }
-        
+
       }
     }
     &-explain-image {

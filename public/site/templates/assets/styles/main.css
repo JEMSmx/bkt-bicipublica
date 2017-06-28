@@ -138,7 +138,9 @@ h1, h2, h3 {
   text-transform: uppercase; }
 
 .title-lighter {
-  font-weight: 500; }
+  font-weight: 500;
+  text-transform: none;
+  font-size: 16px; }
 
 ul {
   padding-left: 25px; }
@@ -293,7 +295,7 @@ img {
   .bkt-jumbo-message .j-wrap {
     flex-direction: column; }
   .bkt-jumbo-message p {
-    font-size: 40px;
+    font-size: 32px;
     margin: auto;
     -webkit-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out; }
