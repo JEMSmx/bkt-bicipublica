@@ -140,13 +140,6 @@
     </section>
   </main>
 <?php include('./_foot.php'); ?>
-<script>
-    function toggleHeaderResponsive() {
-      $('header').toggleClass("mobile-active")
-    }
-    document.getElementById("menu-icon").addEventListener('click', toggleHeaderResponsive);
-    document.getElementById("close-icon").addEventListener('click', toggleHeaderResponsive);
-  </script>
   <script>
     function toggleStationInfo(number){
       var x=0;
