@@ -1,6 +1,5 @@
 <?php include('./_head.php'); ?>
   <main class="j-workspace">
-   <!--  BKT Title-->
    <section class="bkt-features for-titles j-bg-gray-ghost">
       <div class="bkt-features-wrap for-titles">
         <div class="bkt-features-wrap-middle-down-title">
@@ -15,17 +14,14 @@
         </div>
       </div>
     </section>
-   <!--  BKT Mensaje Jumbo-->
    <section class="bkt-jumbo-message">
      <div class="j-wrap">
        <?php echo $page->txt4; ?>
        <hr>
      </div>
    </section>
-   <!--  BKT Fortalezas = Diseño-->
    <section class="bkt-features j-bg-gray-lighter">
       <div class="bkt-features-wrap ">
-        <!--  The next container show a photo in desktop and hidden in mobile for esthetic reason  -->
       <?php $image=$page->img1;
         if($image)
           $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
@@ -68,7 +64,6 @@
           <p><?php echo $page->txt5; ?></p>
           <hr class="right">
         </div>
-        <!--  The next container show a photo in mobile and hidden in desktop for esthetic reason  -->
         <?php $image=$page->img1;
         if($image)
           $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
@@ -76,7 +71,6 @@
         </div>
       </div>
     </section>
-   <!--  BKT Fortalezas = Desarrollo-->
    <section class="bkt-features j-bg-gray-dark">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-text fifthy-percent">
@@ -90,7 +84,6 @@
         </div>
       </div>
     </section>
-   <!--  BKT Fortalezas = Implementación-->
    <section class="bkt-features j-bg-gray-lighter">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-text fifthy-percent">

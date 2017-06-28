@@ -1,6 +1,5 @@
 <?php include('./_head.php'); ?>
  <main class="j-workspace">
-   <!--  BKT Title-->
    <section class="bkt-features for-titles j-bg-gray-ghost">
       <div class="bkt-features-wrap for-titles">
         <div class="bkt-features-wrap-middle-down-title">
@@ -15,7 +14,6 @@
         </div>
       </div>
     </section>
-    <!--  BKT Fortalezas = Bikla-->
     <?php $image=$page->img6;?>
    <section class="bkt-features j-bg-gray-regular multiply-gray" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
       <div class="bkt-features-wrap">
@@ -34,7 +32,6 @@
         </div>
       </div>
     </section>
-    <!--  BKT Fortalezas = Bikla about-->
     <section class="bkt-features j-bg-color-warning">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-text fifthy-percent">
@@ -47,14 +44,12 @@
         </div>
       </div>
     </section>
-    <!--  BKT Mensaje Jumbo-->
     <section class="bkt-jumbo-message">
       <div class="j-wrap">
         <?php echo $page->txt8; ?>
         <hr>
       </div>
     </section>
-   <!--  BKT Fortalezas = MIBICI-->
    <section class="bkt-features j-bg-gray-dark">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-text fifthy-percent">
@@ -75,10 +70,8 @@
         </div>
       </div>
     </section>
-   <!--  BKT Fortalezas = MIBICI About-->
    <section class="bkt-features j-bg-color-inverse">
       <div class="bkt-features-wrap ">
-        <!--  The next container show a photo in desktop and hidden in mobile for esthetic reason  -->
         <?php $image=$page->img3;
         if($image)
           $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
@@ -94,7 +87,6 @@
           <hr class="right">
           <?php echo $page->txt11; ?>
         </div>
-        <!--  The next container show a photo in mobile and hidden in desktop for esthetic reason  -->
         <?php $image=$page->img3;
         if($image)
           $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
@@ -102,18 +94,8 @@
         </div>
       </div>
     </section>
-   <!--  BKT Mensaje Jumbo
-   <section class="bkt-jumbo-message">
-     <div class="j-wrap">
-        <?php echo $page->txt12; ?>
-       <hr>
-     </div>
-   </section>
-   -->
-   <!--  BKT Fortalezas = Software Propio  -->
    <section class="bkt-features j-bg-gray-dark">
       <div class="bkt-features-wrap ">
-        <!--  The next container show a photo in desktop and hidden in mobile for esthetic reason  -->
         <?php $image=$page->img4;
         if($image)
           $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
@@ -130,7 +112,6 @@
           <hr class="right">
           <?php echo str_replace('<p>', '<p class="j-color-inverse">', $page->txt13); ?>
         </div>
-        <!--  The next container show a photo in mobile and hidden in desktop for esthetic reason  -->
         <?php $image=$page->img4;
         if($image)
           $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
@@ -138,7 +119,6 @@
         </div>
       </div>
     </section>
-    <!--  BKT Fortalezas = Operación-->
    <section class="bkt-features j-bg-gray-lighter">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-text fifthy-percent">
@@ -151,7 +131,6 @@
           <hr class="right">
           <?php echo $page->txt14; ?>
         </div>
-
         <?php $image=$page->img5;
         if($image)
           $img_thumb= $image->size(600,400, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>

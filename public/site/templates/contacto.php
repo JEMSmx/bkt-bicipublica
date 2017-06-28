@@ -1,6 +1,5 @@
 <?php include('./_head.php'); ?>
 <main class="j-workspace">
-   <!--  BKT Title-->
    <section class="bkt-features for-titles-contact j-bg-gray-ghost">
       <div class="bkt-features-wrap for-titles-contact">
         <div class="bkt-features-wrap-middle-down-title" style="width: 100%;">
@@ -11,7 +10,6 @@
         </div>
       </div>
     </section>
-    <!--  BKT Fortalezas = Bikla about-->
     <section class="bkt-features j-bg-gray-lighter">
       <div class="bkt-features-wrap">
         <div class="bkt-features-wrap-text fifthy-percent">
@@ -20,11 +18,11 @@
             <?php echo $page->title2; ?>
           <h3>Teléfono</h3>
           <p>
-            <a href="tel:<?php echo intval(preg_replace('/[^0-9]+/', '', $page->title3), 10); ?>"><?php echo $page->title3; ?></a>
+            <a title="Teléfono BKT Bicipublica" href="tel:<?php echo intval(preg_replace('/[^0-9]+/', '', $page->title3), 10); ?>"><?php echo $page->title3; ?></a>
           </p>
           <h3>Correo electronico</h3>
           <p>
-            <a href="mailto:<?php echo $page->title4; ?>"><?php echo $page->title4; ?></a>
+            <a title="Contacto BKT Bicipublica" href="mailto:<?php echo $page->title4; ?>"><?php echo $page->title4; ?></a>
           </p>
         </div>
        <?php $image=$page->img1;
@@ -34,8 +32,6 @@
         </div>
       </div>
     </section>
-    <!--  BKT Mensaje Jumbo-->
-    <!--  For the correct re-use of the element is nesesary the inline image  -->
     <?php $image=$page->img2;?>
    <section class="bkt-jumbo-message-blue multiply-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
        <div class="j-wrap">
@@ -48,34 +44,19 @@
     </section>
   </main>
 <?php include('./_foot.php'); ?>
-   <script type="text/javascript">
-      // When the window has finished loading create our google map below
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVCrIxLv8FKnOzYQr22SdYuaBcVkqn6Xs"
+  type="text/javascript"></script>
+ <script type="text/javascript">
       google.maps.event.addDomListener(window, 'load', init);
-
       function init() {
-          // Basic options for a simple Google Map
-          // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
           var mapOptions = {
-              // How zoomed in you want the map to start at (always required)
               zoom: 11,
-
-              // The latitude and longitude to center the map (always required)
               center: new google.maps.LatLng(20.670622,-103.3545505),
-              zoom: 16,// New York
-            
-
-              // How you would like to style the map. 
-              // This is where you would paste any style found on Snazzy Maps.
+              zoom: 16,
               styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
                 };
-
-          // Get the HTML DOM element that will contain your map 
-          // We are using a div with id="map" seen below in the <body>
           var mapElement = document.getElementById('bkt-contact-map');
-
-          // Create the Google Map using our element and options defined above
           var map = new google.maps.Map(mapElement, mapOptions);
-          // Let's also add a marker while we're at it
           var image = {
             url:'<?php echo $config->urls->templates; ?>static/455375-1495344734/images/location-bkt-bicipublica.png',
           };
