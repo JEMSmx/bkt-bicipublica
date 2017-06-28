@@ -6,12 +6,12 @@
           <hr>
           <ul>
             <li>
-              <a href="https://www.facebook.com/bktbp" target="_blank">
+              <a href="https://www.facebook.com/bktbp" target="_blank" title="Facebook BKT Bicipublica">
                 <img src="<?php echo $config->urls->templates; ?>static/455375-1495344734/images/icono-facebook.svg" alt="Síguenos en facebok">
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/BKTbicipublica" target="_blank">
+              <a href="https://twitter.com/BKTbicipublica" target="_blank" title="Twitter Facebook BKT Bicipublica">
                 <img src="<?php echo $config->urls->templates; ?>static/455375-1495344734/images/icono-twitter.svg" alt="Síguenos en twitter">
               </a>
             </li>
@@ -21,9 +21,9 @@
           <h3>Contacto</h3>
           <hr>
           <p>
-            <a href="tel:3336136383">(33) 3613 6383</a>
+            <a href="tel:3336136383" title="Teléfono Facebook BKT Bicipublica">(33) 3613 6383</a>
             <br>
-            <a href="mailto:info@bktbicipublica.com">info@bktbicipublica.com</a>
+            <a href="mailto:info@bktbicipublica.com" title="Contacto BKT Bicipublica">info@bktbicipublica.com</a>
           </p>
         </div>
         <div class="footer-unit location">
@@ -54,17 +54,13 @@
       </div>
     </div>
   </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
     function toggleHeaderResponsive() {
       $('header').toggleClass("mobile-active")
     }
     document.getElementById("menu-icon").addEventListener('click', toggleHeaderResponsive);
     document.getElementById("close-icon").addEventListener('click', toggleHeaderResponsive);
-    
-  </script>
-  <script>
     AOS.init({
       offset: 200,
       duration: 400,

@@ -1,5 +1,4 @@
 <?php include('./_head.php'); ?>
-  <!--  BKT Slides -->
 <?php $image=$page->img1;
         if($image)
           $img_thumb= $image->height(800, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
@@ -9,25 +8,24 @@
     </div>
   </div>
   <main class="j-workspace">
-  <!--  BKT Fortalezas-->
    <section class="bkt-strengths">
      <div class="j-wrap grid">
       <div class="unit one-third">
-        <img data-aos="zoom-in" src="<?php echo $config->urls->templates; ?>static/455375-1495563394/images/icono-diseño.svg" alt="Icono diseño fortalezas BKT bici pública">
+        <img data-aos="zoom-in" src="<?php echo $config->urls->templates; ?>static/455375-1495563394/images/icono-diseño.svg" alt="Diseño BKT bici pública">
         <h3 data-aos="zoom-in">Diseño</h3>
         <p data-aos="zoom-in">
           Diagnósticos, definición de polígonos, diseño de la red, dimensión y capacidad de estaciones.
         </p>
       </div>
       <div class="unit one-third">
-        <img data-aos="zoom-in" src="<?php echo $config->urls->templates; ?>static/455375-1495563394/images/icono-implementacion.svg" alt="Icono implementación fortalezas BKT bici pública">
+        <img data-aos="zoom-in" src="<?php echo $config->urls->templates; ?>static/455375-1495563394/images/icono-implementacion.svg" alt="Implementación BKT bici pública">
         <h3 data-aos="zoom-in">Implementación</h3>
         <p data-aos="zoom-in">
           Integración de tecnologías, instalación de estaciones, puesta a punto. Gestión social e institucional. Comunicación. 
         </p>
       </div>
       <div class="unit one-third">
-        <img data-aos="zoom-in" src="<?php echo $config->urls->templates; ?>static/455375-1495563394/images/icono-operacion.svg" alt="Icono operación fortalezas BKT bici pública">
+        <img data-aos="zoom-in" src="<?php echo $config->urls->templates; ?>static/455375-1495563394/images/icono-operacion.svg" alt="Operación BKT bici pública">
         <h3 data-aos="zoom-in">Operación</h3>
         <p data-aos="zoom-in">
           Comprender las dinámicas de la ciudad, ofrecer disponibilidad, mantenimiento. Excelencia en el servicio al usuario.
@@ -35,14 +33,12 @@
       </div>
     </div>
    </section>
-   <!--  BKT Mensaje Jumbo-->
    <section class="bkt-jumbo-message">
      <div class="j-wrap">
        <p><?php echo $page->txt1; ?></p>
        <hr>
      </div>
    </section>
-   <!--  BKT Fortalezas = Experiencia-->
    <section class="bkt-features j-bg-gray-lighter">
      <div class="bkt-features-wrap">
        <div class="bkt-features-wrap-text">
@@ -59,10 +55,8 @@
        </div>
      </div>
    </section>
-   <!--  BKT Fortalezas = Asesoria-->
    <section class="bkt-features j-bg-color-inverse">
      <div class="bkt-features-wrap ">
-       <!--  The next container show a photo in desktop and hidden in mobile for esthetic reason  -->
        <?php $image=$page->img3;
         if($image)
           $img_thumb= $image->size(1200,800, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
@@ -73,7 +67,6 @@
          <p><?php echo $page->txt3; ?></p>
          <hr class="right">
        </div>
-       <!--  The next container show a photo in mobile and hidden in desktop for esthetic reason  -->
        <?php $image=$page->img3;
         if($image)
           $img_thumb= $image->size(1200,800, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
@@ -81,7 +74,6 @@
        </div>
      </div>
    </section>
-   <!--  BKT Fortalezas = Transporte Masivo-->
   <?php $image=$page->img6;?>
    <section class="bkt-features j-bg-gray-regular multiply-gray" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
      <div class="bkt-features-wrap">
@@ -100,7 +92,6 @@
        </div>
      </div>
    </section>
-   <!--  BKT Por qué introducir el ciclismo?  -->
    <section class="bkt-features j-bg-color-warning">
      <div class="bkt-features-wrap">
        <div class="bkt-features-wrap-text fifthy-percent">
@@ -114,8 +105,6 @@
        </div>
      </div>
    </section>
-   <!--  BKT Mensaje Jumbo-->
-   <!--  For the correct re-use of the element is nesesary the inline image  -->
    <?php $image=$page->img5;?>
    <section class="bkt-jumbo-message-blue multiply-blue" <?php if($image) { ?> style="background-image: url('<?php echo $image->url; ?>'); <?php } ?>">
       <div class="j-wrap">

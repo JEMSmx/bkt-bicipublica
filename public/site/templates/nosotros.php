@@ -1,6 +1,5 @@
 <?php include('./_head.php'); ?>
  <main class="j-workspace">
-   <!--  BKT Title-->
    <section class="bkt-features for-titles j-bg-gray-lighter">
       <div class="bkt-features-wrap for-titles">
         <div class="bkt-features-wrap-middle-down-title">
@@ -12,7 +11,6 @@
         </div>
       </div>
     </section>
-    <!--  BKT Fortalezas = Alianzas-->
     <section class="bkt-features j-bg-color-inverse">
       <div class="bkt-features-wrap bkt-aliance">
         <div class="bkt-aliance-title">
@@ -38,7 +36,6 @@
         </div>
       </div>
     </section>
-    <!--  BKT Mensaje Jumbo-->
     <?php $image=$page->img1;
         if($image)
           $img_thumb= $image->size(1200,500, array('quality' => 90, 'upscaling' => true, 'cropping' => false)); ?>
@@ -46,7 +43,6 @@
       <div class="j-wrap">
       </div>
     </section>
-    <!--  BKT Fortalezas = Quienes somos-->
     <section class="bkt-features j-bg-color-inverse bkt-team">
       <div class="bkt-features-wrap bkt-aliance">
         <div class="bkt-aliance-title">
@@ -71,6 +67,5 @@
         </div>
       </div>
     </section>
-   
   </main>
 <?php include('./_foot.php'); ?>
