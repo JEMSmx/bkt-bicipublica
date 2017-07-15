@@ -116,4 +116,5 @@
       </div>
     </section>
   </main>
+  <script type="application/ld+json">{"@context":"http://schema.org","@id":"http://www.bktbicipublica.com/#webpage","@type":"WebSite","name":"BKT Bici pública","url":"http://www.bktbicipublica.com/"}</script>
 <?php include('./_foot.php'); ?>

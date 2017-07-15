@@ -11,7 +11,7 @@
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/BKTbicipublica" target="_blank" title="Twitter Facebook BKT Bicipublica">
+              <a href="https://twitter.com/BKTbicipublica" target="_blank" title="Twitter Facebook BKT Bici pública">
                 <img src="<?php echo $config->urls->templates; ?>static/455375-1495344734/images/icono-twitter.svg" alt="Síguenos en twitter">
               </a>
             </li>
@@ -23,7 +23,7 @@
           <p>
             <a href="tel:3336136383" title="Teléfono Facebook BKT Bicipublica">(33) 3613 6383</a>
             <br>
-            <a href="mailto:info@bktbicipublica.com" title="Contacto BKT Bicipublica">info@bktbicipublica.com</a>
+            <a href="mailto:info@bktbicipublica.com" title="Contacto BKT Bici pública">info@bktbicipublica.com</a>
           </p>
         </div>
         <div class="footer-unit location">
@@ -50,7 +50,7 @@
               c5.9,0,10.6,4.8,10.6,10.6S72,40.6,66.1,40.6z"/>
           </g>
         </svg>
-                <p>® BKT pici pública Todos los derechos reservados.</p>
+                <p>® BKT Bici pública Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
@@ -71,7 +71,6 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-70250129-15', 'auto');
   ga('send', 'pageview');
   </script>
