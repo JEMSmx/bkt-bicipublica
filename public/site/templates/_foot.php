@@ -35,6 +35,10 @@
           </p>
         </div>
       </div>
+      <div class="footer-bottom" style="margin: 32px 0;">
+         <p style="color: #00cae4;font-weight: 400;font-size: 20px;margin-right: 295px;white-space: nowrap;text-align: 400px;">Miembro de:</p>
+        <img src="/site/templates/assets/images/logo_nabsa.svg" width="417px" heigth="179px">
+      </div>
       <div class="footer-bottom">
         <svg version="1.0" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
            viewBox="0 0 80.6 44.5" style="enable-background:new 0 0 80.6 44.5;" xml:space="preserve">
