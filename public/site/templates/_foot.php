@@ -21,8 +21,6 @@
           <h3>Contacto</h3>
           <hr>
           <p>
-            <a href="tel:3336136383" title="Teléfono Facebook BKT Bicipublica">(33) 3613 6383</a>
-            <br>
             <a href="mailto:info@bktbicipublica.com" title="Contacto BKT Bici pública">info@bktbicipublica.com</a>
           </p>
         </div>
